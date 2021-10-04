@@ -3,8 +3,8 @@
 - Vooronderzoek test omgeving
 
 ### Week 2 - 
--Goedkeuring testomgeving/cursus
--Start Udemy cursus
+- Goedkeuring testomgeving/cursus
+- Start Udemy cursus
     - WebdriverIO introductie
     - Setup & instalatie testomgeving (node, vscode, chrome, WDIO CLI)
     - Simpele testen schrijven met MochaJS
