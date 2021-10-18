@@ -1,0 +1,160 @@
+{
+  "uid" : "37341369ebb819af",
+  "name" : "Open Home page & click get started btn & assert url contains get-started text",
+  "fullName" : "Home.Open Home page & click get started btn & assert url contains get-started text",
+  "historyId" : "885d51a8e45ba13f030431df0d1b93be",
+  "time" : {
+    "start" : 1634522164941,
+    "stop" : 1634522165352,
+    "duration" : 411
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/url",
+      "time" : {
+        "start" : 1634522164942,
+        "stop" : 1634522165229,
+        "duration" : 287
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "d80372b8356ac1ec",
+        "name" : "Request",
+        "source" : "d80372b8356ac1ec.json",
+        "type" : "application/json",
+        "size" : 50
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1634522165231,
+        "stop" : 1634522165263,
+        "duration" : 32
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "69efd0737fc4e2f3",
+        "name" : "Request",
+        "source" : "69efd0737fc4e2f3.json",
+        "type" : "application/json",
+        "size" : 56
+      }, {
+        "uid" : "20ca92dde3d42899",
+        "name" : "Response",
+        "source" : "20ca92dde3d42899.json",
+        "type" : "application/json",
+        "size" : 83
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element/ed0ab416-5d04-46e4-8e84-65ec5a9c86a2/click",
+      "time" : {
+        "start" : 1634522165276,
+        "stop" : 1634522165337,
+        "duration" : 61
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "GET /session/:sessionId/url",
+      "time" : {
+        "start" : 1634522165338,
+        "stop" : 1634522165350,
+        "duration" : 12
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "7173fc1989453704",
+        "name" : "Response",
+        "source" : "7173fc1989453704.json",
+        "type" : "application/json",
+        "size" : 49
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 4,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Home"
+  }, {
+    "name" : "testClass",
+    "value" : "Home"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open Home page & click get started btn & assert url contains get-started text"
+  }, {
+    "name" : "package",
+    "value" : "Home"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-94.0.4606.81"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a970a6f84ca52bd7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1634522057359,
+        "stop" : 1634522057750,
+        "duration" : 391
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "37341369ebb819af.json",
+  "parameterValues" : [ "chrome-94.0.4606.81" ]
+}

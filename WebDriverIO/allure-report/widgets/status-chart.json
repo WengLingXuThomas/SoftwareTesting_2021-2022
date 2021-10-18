@@ -1,0 +1,161 @@
+[ {
+  "uid" : "9ebeec70912fee7",
+  "name" : "Open About page & assert url",
+  "time" : {
+    "start" : 1634522159394,
+    "stop" : 1634522164337,
+    "duration" : 4943
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "50ddf40461d06bff",
+  "name" : "Find heading element & assert text",
+  "time" : {
+    "start" : 1634522166368,
+    "stop" : 1634522168233,
+    "duration" : 1865
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "758500ee05e7248c",
+  "name" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
+  "time" : {
+    "start" : 1634520076284,
+    "stop" : 1634520084661,
+    "duration" : 8377
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "158aa31c6a97117c",
+  "name" : "Open About page & assert url",
+  "time" : {
+    "start" : 1634522158011,
+    "stop" : 1634522164940,
+    "duration" : 6929
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c8c4d89734c4ad5b",
+  "name" : "Open URL & assert title",
+  "time" : {
+    "start" : 1634522153029,
+    "stop" : 1634522158010,
+    "duration" : 4981
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "26e68c1ed4dad70d",
+  "name" : "Fill in & submit form, assert succes message",
+  "time" : {
+    "start" : 1634522798641,
+    "stop" : 1634522818227,
+    "duration" : 19586
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "45f21ef4b84bc956",
+  "name" : "Click page logo & assert url does not contains get-started text",
+  "time" : {
+    "start" : 1634522164736,
+    "stop" : 1634522165751,
+    "duration" : 1015
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "37341369ebb819af",
+  "name" : "Open Home page & click get started btn & assert url contains get-started text",
+  "time" : {
+    "start" : 1634522164941,
+    "stop" : 1634522165352,
+    "duration" : 411
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f1b17cade8b641aa",
+  "name" : "Open URL & assert title",
+  "time" : {
+    "start" : 1634522155897,
+    "stop" : 1634522159393,
+    "duration" : 3496
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "a45975071f927959",
+  "name" : "Fill in & submit form, assert succes message",
+  "time" : {
+    "start" : 1634522796116,
+    "stop" : 1634522816915,
+    "duration" : 20799
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "7377af91e5cc44a5",
+  "name" : "Click page logo & assert url does not contains get-started text",
+  "time" : {
+    "start" : 1634522165352,
+    "stop" : 1634522166368,
+    "duration" : 1016
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bbf4016b0e6fa1bf",
+  "name" : "Get the text of all menu items & assert them - using wait commands",
+  "time" : {
+    "start" : 1634522155897,
+    "stop" : 1634522159980,
+    "duration" : 4083
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a995c4de6000d864",
+  "name" : "Open Home page & click get started btn & assert url contains get-started text",
+  "time" : {
+    "start" : 1634522164337,
+    "stop" : 1634522164736,
+    "duration" : 399
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3fecc19e3a775288",
+  "name" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
+  "time" : {
+    "start" : 1634520078299,
+    "stop" : 1634520084045,
+    "duration" : 5746
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f42389c9572f30c7",
+  "name" : "Find heading element & assert text",
+  "time" : {
+    "start" : 1634522165751,
+    "stop" : 1634522166097,
+    "duration" : 346
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ddebc9578c8af2fe",
+  "name" : "Get the text of all menu items & assert them - using wait commands",
+  "time" : {
+    "start" : 1634522152999,
+    "stop" : 1634522157744,
+    "duration" : 4745
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

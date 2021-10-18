@@ -1,3 +1,5 @@
+const allure = require('allure-commandline')
+
 exports.config = {
     //
     // ====================
@@ -22,14 +24,26 @@ exports.config = {
     //
     specs: [
         // './test/specs/**/*.js'
-        // './test/specs/**/nav.js'
-        // './test/specs/**/contact.js'
-        './test/specs/**/blog.js'
+        //'./test/specs/**/blog.js'
+        './test/specs/**/contact.js',
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        //'./test/specs/**/nav.js',
+        //'./test/specs/**/contact.js',
+        './test/specs/**/upload.js'
     ],
+    //Define suites
+    suites: {
+        smoke: [
+            './test/specs/**/home.js',
+            './test/specs/**/contact.js'
+        ],
+        component:[
+            './test/specs/**/nav.js'
+        ]
+    },
+
     //
     // ============
     // Capabilities
@@ -65,6 +79,9 @@ exports.config = {
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
+    },
+    {
+        browserName: 'firefox'
     }],
     //
     // ===================
@@ -113,7 +130,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: ['selenium-standalone'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -135,7 +152,14 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: [
+        'spec',
+        ['allure', {
+            outputDir: 'allure-results',
+            disableWebdriverStepsReporting: false,
+            disableWebdriverScreenshotsReporting: false,
+        }]
+    ],
 
 
     
@@ -207,7 +231,8 @@ exports.config = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
-    // beforeTest: function (test, context) {
+    // beforeTest: async function () {
+    //     await browser.setWindowSize(1000, 1000);
     // },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
@@ -224,8 +249,11 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: async function(test, context, { error }) {
+        if (error) {
+            await browser.takeScreenshot();
+        }
+    },
 
 
     /**
@@ -268,8 +296,26 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+    onComplete: function() {
+        const reportError = new Error('Could not generate Allure report')
+        const generation = allure(['generate', 'allure-results', '--clean'])
+        return new Promise((resolve, reject) => {
+            const generationTimeout = setTimeout(
+                () => reject(reportError),
+                5000)
+
+            generation.on('exit', function(exitCode) {
+                clearTimeout(generationTimeout)
+
+                if (exitCode !== 0) {
+                    return reject(reportError)
+                }
+
+                console.log('Allure report successfully generated')
+                resolve()
+            })
+        })
+    },
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session

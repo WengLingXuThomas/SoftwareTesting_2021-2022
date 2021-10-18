@@ -1,12 +1,31 @@
-//Practice E-Commerce Site – Automation Bro
-//https://practice.automationbro.com/
+import HomePage from '../pages/home-page';
+import allureReporter from '@wdio/allure-reporter';
 
 //#Test1
 describe('Home', () =>{
-    it('Open URL & assert title', async () => {
-        //Open url
-        await browser.url('https://practice.automationbro.com/')
 
+ /*    before( async () =>{
+        console.log('THIS COULD BE USED FOR TEST SETUP')
+    }) */
+
+    beforeEach(async () =>{
+        console.log('THIS RUNS BEFORE EACH TEST')
+        
+        //Open url
+        await HomePage.open();
+    })
+
+/*     after( async () =>{
+        console.log('THIS COULD BE USED FOR TEST CLEANUP')
+    })
+
+    afterEach(async () =>{
+        console.log('THIS RUNS AFTER EACH TEST')
+        
+    }) */
+
+    it('Open URL & assert title', async () => {
+        allureReporter.addSeverity("minor");
         // Assert title
         await expect(browser).toHaveTitle('Practice E-Commerce Site – Automation Bro');
     });
@@ -21,11 +40,9 @@ describe('Home', () =>{
 
     
     it('Open Home page & click get started btn & assert url contains get-started text', async () => {
-        //Open Home Page
-        await browser.url('https://practice.automationbro.com');
 
         //Locate & click get started button
-        await $('#get-started').click();
+        await HomePage.btnGetStarted.click();
 
         // Assert url
         await expect(browser).toHaveUrlContaining('get-started');
@@ -33,23 +50,20 @@ describe('Home', () =>{
 
        
     it('Click page logo & assert url does not contains get-started text', async () => {
-        //Open Home Page
-        await browser.url('https://practice.automationbro.com');
+        allureReporter.addFeature("Logo verification");
      
         //locate & click logo
-        //await $('//body/div[1]/header/div/div/div/div/a').click();
         await $('//img[@alt="Practice E-Commerce Site"]').click();
+        await HomePage.imageLogo.click();
 
         // Assert url does not contains get-started text
         await expect(browser).not.toHaveUrlContaining('get-started');
     });
        
     it('Find heading element & assert text', async () => {
-        //Open Home Page
-        await browser.url('https://practice.automationbro.com');
      
         //locate heading element
-        const headingEl = await $('.elementor-widget-container h1');
+        const headingEl = await HomePage.txtHeading
 
 /*         //get the text
         const headingText = await headingEl.getText();

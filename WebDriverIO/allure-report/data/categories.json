@@ -1,0 +1,39 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Expect $(`[role=\"alert\"]`) to have text containing\n                \n                Expected: \"Thank you for contacting us! We will be in touch with you shortly\"\n                Received: \"Thanks for contacting us! We will be in touch with you shortly\"",
+      "children" : [ {
+        "name" : "Fill in & submit form, assert succes message",
+        "uid" : "a45975071f927959",
+        "parentUid" : "3eeb1a8b043dd8221b27ef39cc334ee8",
+        "status" : "failed",
+        "time" : {
+          "start" : 1634522796116,
+          "stop" : 1634522816915,
+          "duration" : 20799
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome-94.0.4606.81" ]
+      }, {
+        "name" : "Fill in & submit form, assert succes message",
+        "uid" : "26e68c1ed4dad70d",
+        "parentUid" : "3eeb1a8b043dd8221b27ef39cc334ee8",
+        "status" : "failed",
+        "time" : {
+          "start" : 1634522798641,
+          "stop" : 1634522818227,
+          "duration" : 19586
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "firefox-93.0" ]
+      } ],
+      "uid" : "3eeb1a8b043dd8221b27ef39cc334ee8"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}
