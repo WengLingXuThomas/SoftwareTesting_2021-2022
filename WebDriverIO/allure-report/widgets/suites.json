@@ -7,9 +7,9 @@
       "failed" : 2,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 2
+      "total" : 4
     }
   }, {
     "uid" : "278c9fd80138bceff114c016a998b949",

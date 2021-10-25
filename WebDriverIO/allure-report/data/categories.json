@@ -7,7 +7,7 @@
       "name" : "Expect $(`[role=\"alert\"]`) to have text containing\n                \n                Expected: \"Thank you for contacting us! We will be in touch with you shortly\"\n                Received: \"Thanks for contacting us! We will be in touch with you shortly\"",
       "children" : [ {
         "name" : "Fill in & submit form, assert succes message",
-        "uid" : "a45975071f927959",
+        "uid" : "4b194d4d58e345b3",
         "parentUid" : "3eeb1a8b043dd8221b27ef39cc334ee8",
         "status" : "failed",
         "time" : {
@@ -20,17 +20,17 @@
         "parameters" : [ "chrome-94.0.4606.81" ]
       }, {
         "name" : "Fill in & submit form, assert succes message",
-        "uid" : "26e68c1ed4dad70d",
+        "uid" : "c46ca1053266a939",
         "parentUid" : "3eeb1a8b043dd8221b27ef39cc334ee8",
         "status" : "failed",
         "time" : {
-          "start" : 1634522798641,
-          "stop" : 1634522818227,
-          "duration" : 19586
+          "start" : 1635130154111,
+          "stop" : 1635130181448,
+          "duration" : 27337
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "firefox-93.0" ]
+        "parameters" : [ "chrome-94.0.4606.71" ]
       } ],
       "uid" : "3eeb1a8b043dd8221b27ef39cc334ee8"
     } ],

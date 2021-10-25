@@ -5,7 +5,7 @@
     "name" : "Blog",
     "children" : [ {
       "name" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
-      "uid" : "758500ee05e7248c",
+      "uid" : "6c1de31006c2b61b",
       "parentUid" : "75747d2aa3e1333fc2e4346e24750ec2",
       "status" : "passed",
       "time" : {
@@ -18,7 +18,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
-      "uid" : "3fecc19e3a775288",
+      "uid" : "82edd3e866228579",
       "parentUid" : "75747d2aa3e1333fc2e4346e24750ec2",
       "status" : "passed",
       "time" : {
@@ -35,7 +35,7 @@
     "name" : "Navigation Menu",
     "children" : [ {
       "name" : "Get the text of all menu items & assert them - using wait commands",
-      "uid" : "ddebc9578c8af2fe",
+      "uid" : "c0a30f1907d40107",
       "parentUid" : "255488394fa1a5db61288ee32314a860",
       "status" : "passed",
       "time" : {
@@ -48,7 +48,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Get the text of all menu items & assert them - using wait commands",
-      "uid" : "bbf4016b0e6fa1bf",
+      "uid" : "7f8c823325deb1d1",
       "parentUid" : "255488394fa1a5db61288ee32314a860",
       "status" : "passed",
       "time" : {
@@ -65,7 +65,7 @@
     "name" : "Home",
     "children" : [ {
       "name" : "Open URL & assert title",
-      "uid" : "c8c4d89734c4ad5b",
+      "uid" : "7e3f18b078940dac",
       "parentUid" : "4407ed10bf82118ffd06c3d2bbb0138a",
       "status" : "passed",
       "time" : {
@@ -78,7 +78,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Open URL & assert title",
-      "uid" : "f1b17cade8b641aa",
+      "uid" : "d692681e57d71396",
       "parentUid" : "4407ed10bf82118ffd06c3d2bbb0138a",
       "status" : "passed",
       "time" : {
@@ -91,7 +91,7 @@
       "parameters" : [ "firefox-93.0" ]
     }, {
       "name" : "Open About page & assert url",
-      "uid" : "158aa31c6a97117c",
+      "uid" : "89047606a060c9fb",
       "parentUid" : "4407ed10bf82118ffd06c3d2bbb0138a",
       "status" : "passed",
       "time" : {
@@ -104,7 +104,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Open About page & assert url",
-      "uid" : "9ebeec70912fee7",
+      "uid" : "e4c67f44180b8ecb",
       "parentUid" : "4407ed10bf82118ffd06c3d2bbb0138a",
       "status" : "passed",
       "time" : {
@@ -117,7 +117,7 @@
       "parameters" : [ "firefox-93.0" ]
     }, {
       "name" : "Open Home page & click get started btn & assert url contains get-started text",
-      "uid" : "a995c4de6000d864",
+      "uid" : "daa43d4f82c97af7",
       "parentUid" : "4407ed10bf82118ffd06c3d2bbb0138a",
       "status" : "passed",
       "time" : {
@@ -130,7 +130,7 @@
       "parameters" : [ "firefox-93.0" ]
     }, {
       "name" : "Click page logo & assert url does not contains get-started text",
-      "uid" : "45f21ef4b84bc956",
+      "uid" : "7950166aad1a045a",
       "parentUid" : "4407ed10bf82118ffd06c3d2bbb0138a",
       "status" : "passed",
       "time" : {
@@ -143,7 +143,7 @@
       "parameters" : [ "firefox-93.0" ]
     }, {
       "name" : "Open Home page & click get started btn & assert url contains get-started text",
-      "uid" : "37341369ebb819af",
+      "uid" : "a0b01f4e8817a6cc",
       "parentUid" : "4407ed10bf82118ffd06c3d2bbb0138a",
       "status" : "passed",
       "time" : {
@@ -156,7 +156,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Click page logo & assert url does not contains get-started text",
-      "uid" : "7377af91e5cc44a5",
+      "uid" : "6658bea2310c075e",
       "parentUid" : "4407ed10bf82118ffd06c3d2bbb0138a",
       "status" : "passed",
       "time" : {
@@ -169,7 +169,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Find heading element & assert text",
-      "uid" : "f42389c9572f30c7",
+      "uid" : "b5812b29b91b1ae5",
       "parentUid" : "4407ed10bf82118ffd06c3d2bbb0138a",
       "status" : "passed",
       "time" : {
@@ -182,7 +182,7 @@
       "parameters" : [ "firefox-93.0" ]
     }, {
       "name" : "Find heading element & assert text",
-      "uid" : "50ddf40461d06bff",
+      "uid" : "eaa9395a63198c2c",
       "parentUid" : "4407ed10bf82118ffd06c3d2bbb0138a",
       "status" : "passed",
       "time" : {
@@ -199,7 +199,7 @@
     "name" : "Contact Form",
     "children" : [ {
       "name" : "Fill in & submit form, assert succes message",
-      "uid" : "a45975071f927959",
+      "uid" : "4b194d4d58e345b3",
       "parentUid" : "ea623dbb84aa3104747b0966757d86ba",
       "status" : "failed",
       "time" : {
@@ -212,13 +212,39 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Fill in & submit form, assert succes message",
-      "uid" : "26e68c1ed4dad70d",
+      "uid" : "c46ca1053266a939",
       "parentUid" : "ea623dbb84aa3104747b0966757d86ba",
       "status" : "failed",
       "time" : {
-        "start" : 1634522798641,
-        "stop" : 1634522818227,
-        "duration" : 19586
+        "start" : 1635130154111,
+        "stop" : 1635130181448,
+        "duration" : 27337
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-94.0.4606.71" ]
+    }, {
+      "name" : "Fill in & submit form, assert succes message",
+      "uid" : "45ae10a32cb51e60",
+      "parentUid" : "ea623dbb84aa3104747b0966757d86ba",
+      "status" : "passed",
+      "time" : {
+        "start" : 1635135238051,
+        "stop" : 1635135248835,
+        "duration" : 10784
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-95.0.4638.54" ]
+    }, {
+      "name" : "Fill in & submit form, assert succes message",
+      "uid" : "d9c5878b28433a0b",
+      "parentUid" : "ea623dbb84aa3104747b0966757d86ba",
+      "status" : "passed",
+      "time" : {
+        "start" : 1635135239818,
+        "stop" : 1635135249616,
+        "duration" : 9798
       },
       "flaky" : false,
       "newFailed" : false,

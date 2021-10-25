@@ -22,6 +22,6 @@ describe('Contact Form', () => {
     
         const succesEL = await ContactPage.alertEl;
 
-        await expect(succesEL).toHaveTextContaining('Thank you for contacting us! We will be in touch with you shortly');
+        await expect(succesEL).toHaveTextContaining('Thanks for contacting us! We will be in touch with you shortly');
     });
 });

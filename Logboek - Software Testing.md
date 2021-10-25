@@ -9,7 +9,6 @@
     - Setup & instalatie testomgeving (node, vscode, chrome, WDIO CLI)
     - Simpele e2e testen schrijven met MochaJS
     - Uitgebreid labo, werken met Web elementen, basic assertions
-
 ### Week 3 -3 uur
 - 12/10/21
     - Voordelen Expect assertions van WDIO, overzicht verschillende matchers - 50 min
@@ -17,7 +16,6 @@
     - Upload Tests - 45 min
     - Debugging in WDIO - 20 min
     - Framework setup: configuratie babel, eslint, directory structure -> doel: het werken met WDIO vergemakkelijken  - 30 min
-
 ### Week 4 - 4,5 uur
 - 17/10/21
     - Page Object Model - 1,5 uur
@@ -38,7 +36,20 @@
         - Setup Allure Reporter, genereer html report - https://webdriver.io/docs/allure-reporter/
         - Customize Allure report
         - Add screenshot on test failure
+### Week 5 - 2 uur
+- 24/10/21
+    - Browserstack integratie voor testing doeleinden - 45 min
+        - uitleg
+        - setup
+        - integratie WDIO
+        - eerste testen met browserstack
+    - Jenkins - 1 uur
+        - intro
+        - Setup configuratie/job
+        - Testen runnen in Jenkins
+        - integratie allure in Jenkins
+    - FAQ/ recap cursus - 15 min
 
-
-
+    (cursus afgerond)
+    
 
