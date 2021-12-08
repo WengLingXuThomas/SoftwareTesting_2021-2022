@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "Unable to locate element: #site-logo",
+  "stacktrace": "WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:181:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.jsm:393:5\nelement.find/</<@chrome://remote/content/marionette/element.js:299:16\n"
+}

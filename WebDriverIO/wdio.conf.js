@@ -31,8 +31,11 @@ exports.config = {
     specs: [
         // './test/specs/**/*.js'
         //'./test/specs/**/blog.js'
-        './test/specs/**/contact.js',
+        //'./test/specs/**/contact.js',
+        //'./test/specs/**/home.js',
+        './test/specs/**/iframe.js',
     ],
+    
     // Patterns to exclude.
     exclude: [
         //'./test/specs/**/nav.js',
@@ -86,9 +89,9 @@ exports.config = {
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
     },
-    {
+   /*  {
         browserName: 'firefox'
-    }],
+    } */],
     //
     // ===================
     // Test Configurations

@@ -51,5 +51,29 @@
     - FAQ/ recap cursus - 15 min
 
     (cursus afgerond)
+
+### week 6 & 7
+- niet aan gewerkt
+### Week 8 - 4 uur
+- Testen met een Iframe
+- WDIO uitbreiding/demo
+
+### Week 9 & 10 - 6 uur
+- zoeken externe jsframeworks voor software testing compatibel met webdriverIO;
+    - Volgen van tutorial lostaand van udemy cursus, cucumberjs om BDD mogelijk te maken.
+        -> "WebDriverIO-cucumber -V5 Tutorial": https://www.youtube.com/playlist?list=PLXBKC3hh6AEr5dMdptmk5-S5_yyHKQ4cW
+        - Aangepaste Setup WDIO
+        - Eerste Test met CucumberJS
+            - Feature specificatie
+            - Step Definitions
+    - uitgebreider toepassen met eigen oefening in spring boot.
+
+### Week 11 -1,5 uur
+- informeren test tooling voor web & mobile
+
     
+        
+
+
+
 

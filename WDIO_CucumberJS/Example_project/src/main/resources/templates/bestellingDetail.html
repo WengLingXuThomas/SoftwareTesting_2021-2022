@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details bestelling</title>
+    <link rel="stylesheet" th:href="@{/css/site.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">Imatex</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        <h1 class="text-center">Bestelling</h1>
+        <h4 class="text-center" >Details</h4>
+        <hr>
+        <dl class="row">
+            <dt class="col-sm-4 font-weight-bold">ID:</dt>
+            <dd class="col-sm-8"><span th:text="${bestelling.id}"/></dd>
+            <dt class="col-sm-4 font-weight-bold">Bestellingsdatum:</dt>
+            <dd class="col-sm-8"><span th:text="${bestelling.bestellingsdatum}"/></dd>
+            <dt class="col-sm-4 font-weight-bold">Bestellingsnummer:</dt>
+            <dd class="col-sm-8"><span th:text="${bestelling.bestellingsnummer}"/></dd>
+            <dt class="col-sm-4 font-weight-bold">Klantnummer:</dt>
+            <dd class="col-sm-8"><span th:text="${bestelling.klantnummer}"/></dd>
+            <dt class="col-sm-4 font-weight-bold">Status:</dt>
+            <dd class="col-sm-8"><span th:text="${bestelling.status}"/></dd>
+            <dt class="col-sm-4 font-weight-bold">Verpakkingsinformatie:</dt>
+            <dd class="col-sm-8"><span th:text="${bestelling.verpakkingsInformatie}"/></dd>
+            <dt class="col-sm-4 font-weight-bold">Scherm IDs:</dt>
+            <dd class="col-sm-8"><span th:text="${bestelling.schermIds}"/></dd>
+            <dd class="col-sm-12 mt-2">
+                <button  type="button" class="btn btn-primary" th:onclick="'window.location.href = \'' + @{/bestelling/edit?id={id} (id=${bestelling.getId()}) } + '\''" >Wijzig</button>
+                <button  type="button" class="btn btn-danger" th:onclick="'window.location.href = \'' + @{/bestelling/verwijderen?id={id} (id=${bestelling.getId()}) } + '\''" >Verwijderen</button>
+            </dd>
+        </dl>
+        <h5>Bestelde schermen:</h5>
+        <table class="table" style="width: 100%">
+            <thead>
+            <tr>
+                <th class="text-center" scope="col">ID</th>
+                <th class="text-center" scope="col">Lengte</th>
+                <th class="text-center" scope="col">Breedte</th>
+                <th class="text-center" scope="col">Dikte</th>
+                <th class="text-center" scope="col">Materiaal type</th>
+                <th class="text-center" scope="col">Voorkeuren</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="scherm : ${schermen}">
+                <td class="text-center" th:text="${scherm.id}"></td>
+                <td class="text-center" th:text="${scherm.lengte}"></td>
+                <td class="text-center" th:text="${scherm.breedte}"></td>
+                <td class="text-center" th:text="${scherm.dikte}"></td>
+                <td class="text-center" th:text="${scherm.materiaalType}"></td>
+                <td class="text-center" th:text="${scherm.voorkeuren}"></td>
+            </tr>
+            </tbody>
+        </table>
+        <div>
+            <a href="/bestellingenOverzicht">Terug naar overzichts-pagina</a>
+        </div>
+    </main>
+</div>
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2021 - Imatex
+    </div>
+</footer>
+</body>
+</html>

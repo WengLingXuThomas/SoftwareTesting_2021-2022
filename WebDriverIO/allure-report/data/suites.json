@@ -5,7 +5,7 @@
     "name" : "Blog",
     "children" : [ {
       "name" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
-      "uid" : "6c1de31006c2b61b",
+      "uid" : "444ad2c9816d657",
       "parentUid" : "ee1685b456f57519133ce3e714f59cef",
       "status" : "passed",
       "time" : {
@@ -18,7 +18,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
-      "uid" : "82edd3e866228579",
+      "uid" : "1c2ef6de05214bae",
       "parentUid" : "ee1685b456f57519133ce3e714f59cef",
       "status" : "passed",
       "time" : {
@@ -35,7 +35,7 @@
     "name" : "Navigation Menu",
     "children" : [ {
       "name" : "Get the text of all menu items & assert them - using wait commands",
-      "uid" : "c0a30f1907d40107",
+      "uid" : "8b247761a2647832",
       "parentUid" : "5a721a926d06f12824d399397176a7e7",
       "status" : "passed",
       "time" : {
@@ -48,7 +48,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Get the text of all menu items & assert them - using wait commands",
-      "uid" : "7f8c823325deb1d1",
+      "uid" : "457fb113110c5aa0",
       "parentUid" : "5a721a926d06f12824d399397176a7e7",
       "status" : "passed",
       "time" : {
@@ -65,7 +65,7 @@
     "name" : "Home",
     "children" : [ {
       "name" : "Open URL & assert title",
-      "uid" : "7e3f18b078940dac",
+      "uid" : "d851ad5b7935342d",
       "parentUid" : "278c9fd80138bceff114c016a998b949",
       "status" : "passed",
       "time" : {
@@ -78,7 +78,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Open URL & assert title",
-      "uid" : "d692681e57d71396",
+      "uid" : "3561d2c5e2442f7e",
       "parentUid" : "278c9fd80138bceff114c016a998b949",
       "status" : "passed",
       "time" : {
@@ -91,7 +91,7 @@
       "parameters" : [ "firefox-93.0" ]
     }, {
       "name" : "Open About page & assert url",
-      "uid" : "89047606a060c9fb",
+      "uid" : "db36264e1c6effae",
       "parentUid" : "278c9fd80138bceff114c016a998b949",
       "status" : "passed",
       "time" : {
@@ -104,7 +104,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Open About page & assert url",
-      "uid" : "e4c67f44180b8ecb",
+      "uid" : "fee826f57ca87008",
       "parentUid" : "278c9fd80138bceff114c016a998b949",
       "status" : "passed",
       "time" : {
@@ -117,7 +117,7 @@
       "parameters" : [ "firefox-93.0" ]
     }, {
       "name" : "Open Home page & click get started btn & assert url contains get-started text",
-      "uid" : "daa43d4f82c97af7",
+      "uid" : "3b09018892ef6a17",
       "parentUid" : "278c9fd80138bceff114c016a998b949",
       "status" : "passed",
       "time" : {
@@ -130,7 +130,7 @@
       "parameters" : [ "firefox-93.0" ]
     }, {
       "name" : "Click page logo & assert url does not contains get-started text",
-      "uid" : "7950166aad1a045a",
+      "uid" : "3857996202637217",
       "parentUid" : "278c9fd80138bceff114c016a998b949",
       "status" : "passed",
       "time" : {
@@ -143,7 +143,7 @@
       "parameters" : [ "firefox-93.0" ]
     }, {
       "name" : "Open Home page & click get started btn & assert url contains get-started text",
-      "uid" : "a0b01f4e8817a6cc",
+      "uid" : "dee7c4ad2eaa79ac",
       "parentUid" : "278c9fd80138bceff114c016a998b949",
       "status" : "passed",
       "time" : {
@@ -156,7 +156,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Click page logo & assert url does not contains get-started text",
-      "uid" : "6658bea2310c075e",
+      "uid" : "310feccc5bd1f6a7",
       "parentUid" : "278c9fd80138bceff114c016a998b949",
       "status" : "passed",
       "time" : {
@@ -169,7 +169,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Find heading element & assert text",
-      "uid" : "b5812b29b91b1ae5",
+      "uid" : "4d5e481e93f12772",
       "parentUid" : "278c9fd80138bceff114c016a998b949",
       "status" : "passed",
       "time" : {
@@ -182,7 +182,7 @@
       "parameters" : [ "firefox-93.0" ]
     }, {
       "name" : "Find heading element & assert text",
-      "uid" : "eaa9395a63198c2c",
+      "uid" : "509775e499470f62",
       "parentUid" : "278c9fd80138bceff114c016a998b949",
       "status" : "passed",
       "time" : {
@@ -193,13 +193,143 @@
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ "chrome-94.0.4606.81" ]
+    }, {
+      "name" : "Open URL & assert title",
+      "uid" : "121cc4ec5beea9aa",
+      "parentUid" : "278c9fd80138bceff114c016a998b949",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638911503100,
+        "stop" : 1638911528626,
+        "duration" : 25526
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-96.0.4664.93" ]
+    }, {
+      "name" : "Open URL & assert title",
+      "uid" : "79ae85fe83b87ea5",
+      "parentUid" : "278c9fd80138bceff114c016a998b949",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638911505763,
+        "stop" : 1638911530976,
+        "duration" : 25213
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "firefox-94.0.2" ]
+    }, {
+      "name" : "Open About page & assert url",
+      "uid" : "e7e87e5efacbe22d",
+      "parentUid" : "278c9fd80138bceff114c016a998b949",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638911528627,
+        "stop" : 1638911538145,
+        "duration" : 9518
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-96.0.4664.93" ]
+    }, {
+      "name" : "Open About page & assert url",
+      "uid" : "492448263079692a",
+      "parentUid" : "278c9fd80138bceff114c016a998b949",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638911530976,
+        "stop" : 1638911537670,
+        "duration" : 6694
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "firefox-94.0.2" ]
+    }, {
+      "name" : "Open Home page & click get started btn & assert url contains get-started text",
+      "uid" : "a0cb615179882522",
+      "parentUid" : "278c9fd80138bceff114c016a998b949",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638911537670,
+        "stop" : 1638911538093,
+        "duration" : 423
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "firefox-94.0.2" ]
+    }, {
+      "name" : "Click page logo & assert url does not contains get-started text",
+      "uid" : "6913cc6ce661312c",
+      "parentUid" : "278c9fd80138bceff114c016a998b949",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638911538093,
+        "stop" : 1638911539141,
+        "duration" : 1048
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "firefox-94.0.2" ]
+    }, {
+      "name" : "Open Home page & click get started btn & assert url contains get-started text",
+      "uid" : "8a4d8df86804fd78",
+      "parentUid" : "278c9fd80138bceff114c016a998b949",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638911538145,
+        "stop" : 1638911538681,
+        "duration" : 536
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-96.0.4664.93" ]
+    }, {
+      "name" : "Click page logo & assert url does not contains get-started text",
+      "uid" : "1199aab1b27288f6",
+      "parentUid" : "278c9fd80138bceff114c016a998b949",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638911538681,
+        "stop" : 1638911539844,
+        "duration" : 1163
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-96.0.4664.93" ]
+    }, {
+      "name" : "Find heading element & assert text",
+      "uid" : "8606cdd2130e8b9e",
+      "parentUid" : "278c9fd80138bceff114c016a998b949",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638911539141,
+        "stop" : 1638911539540,
+        "duration" : 399
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "firefox-94.0.2" ]
+    }, {
+      "name" : "Find heading element & assert text",
+      "uid" : "d8d5e3fbdebd769e",
+      "parentUid" : "278c9fd80138bceff114c016a998b949",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638911539845,
+        "stop" : 1638911542374,
+        "duration" : 2529
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-96.0.4664.93" ]
     } ],
     "uid" : "278c9fd80138bceff114c016a998b949"
   }, {
     "name" : "Contact Form",
     "children" : [ {
       "name" : "Fill in & submit form, assert succes message",
-      "uid" : "4b194d4d58e345b3",
+      "uid" : "62e0984cb4714ec9",
       "parentUid" : "ed8b5cdb9b3cb5c90f251a51a0f8d50d",
       "status" : "failed",
       "time" : {
@@ -212,7 +342,7 @@
       "parameters" : [ "chrome-94.0.4606.81" ]
     }, {
       "name" : "Fill in & submit form, assert succes message",
-      "uid" : "c46ca1053266a939",
+      "uid" : "5253efd54eeb3de5",
       "parentUid" : "ed8b5cdb9b3cb5c90f251a51a0f8d50d",
       "status" : "failed",
       "time" : {
@@ -225,7 +355,7 @@
       "parameters" : [ "chrome-94.0.4606.71" ]
     }, {
       "name" : "Fill in & submit form, assert succes message",
-      "uid" : "45ae10a32cb51e60",
+      "uid" : "4d874d3a1fffd17c",
       "parentUid" : "ed8b5cdb9b3cb5c90f251a51a0f8d50d",
       "status" : "passed",
       "time" : {
@@ -238,7 +368,7 @@
       "parameters" : [ "chrome-95.0.4638.54" ]
     }, {
       "name" : "Fill in & submit form, assert succes message",
-      "uid" : "d9c5878b28433a0b",
+      "uid" : "fe3837520d7aff8a",
       "parentUid" : "ed8b5cdb9b3cb5c90f251a51a0f8d50d",
       "status" : "passed",
       "time" : {
@@ -251,5 +381,35 @@
       "parameters" : [ "firefox-93.0" ]
     } ],
     "uid" : "ed8b5cdb9b3cb5c90f251a51a0f8d50d"
+  }, {
+    "name" : "IFrame",
+    "children" : [ {
+      "name" : "Working with iframe",
+      "uid" : "5cd06bcfaeed6748",
+      "parentUid" : "0def57b8f36c90e8f6e04361f8483326",
+      "status" : "failed",
+      "time" : {
+        "start" : 1638929652963,
+        "stop" : 1638929670397,
+        "duration" : 17434
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "firefox-94.0.2" ]
+    }, {
+      "name" : "Working with iframe",
+      "uid" : "ac47cae0026d1f89",
+      "parentUid" : "0def57b8f36c90e8f6e04361f8483326",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638929881734,
+        "stop" : 1638929889005,
+        "duration" : 7271
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-96.0.4664.93" ]
+    } ],
+    "uid" : "0def57b8f36c90e8f6e04361f8483326"
   } ]
 }

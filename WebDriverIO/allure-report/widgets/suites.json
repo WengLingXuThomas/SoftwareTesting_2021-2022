@@ -1,5 +1,5 @@
 {
-  "total" : 4,
+  "total" : 5,
   "items" : [ {
     "uid" : "ed8b5cdb9b3cb5c90f251a51a0f8d50d",
     "name" : "Contact Form",
@@ -12,15 +12,26 @@
       "total" : 4
     }
   }, {
+    "uid" : "0def57b8f36c90e8f6e04361f8483326",
+    "name" : "IFrame",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
     "uid" : "278c9fd80138bceff114c016a998b949",
     "name" : "Home",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 10,
+      "passed" : 20,
       "unknown" : 0,
-      "total" : 10
+      "total" : 20
     }
   }, {
     "uid" : "ee1685b456f57519133ce3e714f59cef",

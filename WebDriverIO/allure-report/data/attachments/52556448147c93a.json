@@ -1,0 +1,139 @@
+{
+  "id": {
+    "sessionId": "d19e80f898ef5965550f25c1c6f43fea",
+    "elementId": "547aa233-1310-40ce-90cb-0d19ec27fae6",
+    "element-6066-11e4-a52e-4f735466cecf": "547aa233-1310-40ce-90cb-0d19ec27fae6",
+    "selector": "#advanced_iframe",
+    "parent": {
+      "sessionId": "d19e80f898ef5965550f25c1c6f43fea",
+      "capabilities": {
+        "acceptInsecureCerts": true,
+        "browserName": "chrome",
+        "browserVersion": "96.0.4664.93",
+        "chrome": {
+          "chromedriverVersion": "96.0.4664.45 (76e4c1bb2ab4671b8beba3444e61c0f17584b2fc-refs/branch-heads/4664@{#947})",
+          "userDataDir": "C:\\Users\\LINGXU~1\\AppData\\Local\\Temp\\scoped_dir1324_1848986435"
+        },
+        "goog:chromeOptions": {
+          "debuggerAddress": "localhost:49727"
+        },
+        "networkConnectionEnabled": false,
+        "pageLoadStrategy": "normal",
+        "platformName": "windows",
+        "proxy": {},
+        "setWindowRect": true,
+        "strictFileInteractability": false,
+        "timeouts": {
+          "implicit": 0,
+          "pageLoad": 300000,
+          "script": 30000
+        },
+        "unhandledPromptBehavior": "dismiss and notify",
+        "webauthn:extension:credBlob": true,
+        "webauthn:extension:largeBlob": true,
+        "webauthn:virtualAuthenticators": true,
+        "webdriver.remote.sessionid": "d19e80f898ef5965550f25c1c6f43fea"
+      },
+      "config": {
+        "specs": [
+          "./test/specs/**/iframe.js"
+        ],
+        "suites": {
+          "smoke": [
+            "./test/specs/**/home.js",
+            "./test/specs/**/contact.js"
+          ],
+          "component": [
+            "./test/specs/**/nav.js"
+          ]
+        },
+        "exclude": [
+          "./test/specs/**/upload.js"
+        ],
+        "logLevel": "info",
+        "logLevels": {},
+        "excludeDriverLogs": [],
+        "bail": 0,
+        "waitforInterval": 500,
+        "waitforTimeout": 10000,
+        "framework": "mocha",
+        "reporters": [
+          "spec",
+          [
+            "allure",
+            {
+              "outputDir": "allure-results",
+              "disableWebdriverStepsReporting": false,
+              "disableWebdriverScreenshotsReporting": false
+            }
+          ]
+        ],
+        "services": [
+          "selenium-standalone"
+        ],
+        "maxInstances": 10,
+        "maxInstancesPerCapability": 100,
+        "filesToWatch": [],
+        "connectionRetryTimeout": 120000,
+        "connectionRetryCount": 3,
+        "execArgv": [],
+        "runnerEnv": {},
+        "runner": "local",
+        "specFileRetries": 0,
+        "specFileRetriesDelay": 0,
+        "specFileRetriesDeferred": false,
+        "reporterSyncInterval": 100,
+        "reporterSyncTimeout": 5000,
+        "cucumberFeaturesWithLineNumbers": [],
+        "autoCompileOpts": {
+          "autoCompile": true,
+          "tsNodeOpts": {
+            "transpileOnly": true
+          },
+          "babelOpts": {}
+        },
+        "mochaOpts": {
+          "timeout": 60000,
+          "ui": "bdd"
+        },
+        "jasmineOpts": {
+          "defaultTimeoutInterval": 10000
+        },
+        "cucumberOpts": {
+          "timeout": 10000
+        },
+        "onPrepare": [],
+        "onWorkerStart": [],
+        "before": [],
+        "beforeSession": [],
+        "beforeSuite": [],
+        "beforeHook": [],
+        "beforeTest": [],
+        "beforeCommand": [],
+        "afterCommand": [],
+        "afterTest": [
+          null
+        ],
+        "afterHook": [],
+        "afterSuite": [],
+        "afterSession": [],
+        "after": [],
+        "onComplete": [
+          null
+        ],
+        "onReload": [],
+        "beforeFeature": [],
+        "beforeScenario": [],
+        "beforeStep": [],
+        "afterStep": [],
+        "afterScenario": [],
+        "afterFeature": [],
+        "baseUrl": "https://practice.automationbro.com",
+        "_": [],
+        "$0": "node_modules\\@wdio\\cli\\bin\\wdio.js",
+        "ignoredWorkerServices": []
+      }
+    },
+    "isReactElement": false
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/site.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">Imatex</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        <h1 class="text-center">Login</h1>
+        <hr>
+        <form class="d-flex flex-row justify-content-center"  method="POST" th:action="@{/login}">
+            <div style="width: 50%">
+                <div class="text-center" th:if="${error}" style="color: red; margin-top: 1em; margin-bottom: 1em;">
+                    Inloggen mislukt. Controleer je gebruikersnaam en paswoord.<br/>
+                </div>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                <div class="d-flex flex-column justify-content-center form-group">
+                    <label class="font-weight-bold text-center" for="username">Gebruikersnaam: </label>
+                    <input id="username" class="form-control" type="text" name="username"/><br/>
+                </div>
+                <div class="d-flex flex-column justify-content-center form-group">
+                    <label class="font-weight-bold text-center" for="password">Paswoord: </label>
+                    <input id="password" class="form-control" type="password" name="password"/><br/>
+                </div>
+                <div class="form-group text-center">
+                    <input style="width:95%; font-weight: bold; font-size: 1.5em " id="btnLogin" type="submit" class="btn btn-primary" value="Login"/>
+                </div>
+            </div>
+        </form>
+    </main>
+</div>
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2021 - Imatex
+    </div>
+</footer>
+</body>
+</html>
+
+
+
+

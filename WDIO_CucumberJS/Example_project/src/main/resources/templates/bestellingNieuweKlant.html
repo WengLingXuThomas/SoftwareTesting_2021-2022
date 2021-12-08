@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bestelling</title>
+    <link rel="stylesheet" th:href="@{/css/site.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">Imatex</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        <h1 class="text-center">Bestelling</h1>
+        <h4 class="text-center" >Nieuwe bestelling nieuwe klant</h4>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <form id="bestellingForm" method="POST" th:action="@{/bestellingNieuweKlant}"  th:object="${bestellingNKlantModel}">
+                    <input type="hidden" th:field="*{bestellingNKlantData.id}" />
+                    <div class="form-group">
+                        <label class="control-label">Voornaam*:&nbsp;</label>
+                        <input class="form-control" type="text"  th:field="*{bestellingNKlantData.voornaam}" />
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('bestellingNKlantData.voornaam')}"
+                              th:errors="*{bestellingNKlantData.voornaam}">voornaamError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">naam*:&nbsp;</label>
+                        <input class="form-control" type="text"  th:field="*{bestellingNKlantData.naam}" />
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('bestellingNKlantData.naam')}"
+                              th:errors="*{bestellingNKlantData.naam}">naamError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Telefoonnummer*:&nbsp;</label>
+                        <input class="form-control" type="text" th:field="*{bestellingNKlantData.telefoonnummer}" />
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('bestellingNKlantData.telefoonnummer')}"
+                              th:errors="*{bestellingNKlantData.telefoonnummer}">telefoonnummerError
+                            </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">E-mail*:&nbsp;</label>
+                        <input class="form-control" type="text" th:field="*{bestellingNKlantData.email}" />
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('bestellingNKlantData.email')}"
+                              th:errors="*{bestellingNKlantData.email}">emailError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Postnummer*:&nbsp;</label>
+                        <input class="form-control" type="text" th:field="*{bestellingNKlantData.postnummer}" />
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('bestellingNKlantData.postnummer')}"
+                              th:errors="*{bestellingNKlantData.postnummer}">postnummerError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Gemeente*:&nbsp;</label>
+                        <input class="form-control" type="text" th:field="*{bestellingNKlantData.gemeente}" />
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('bestellingNKlantData.gemeente')}"
+                              th:errors="*{bestellingNKlantData.gemeente}">gemeenteError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Straatnaam*:&nbsp;</label>
+                        <input class="form-control" type="text"  th:field="*{bestellingNKlantData.straatnaam}" />
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('bestellingNKlantData.straatnaam')}"
+                              th:errors="*{bestellingNKlantData.straatnaam}">straatnaamError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">straatnummer*:&nbsp;</label>
+                        <input class="form-control" type="text"  th:field="*{bestellingNKlantData.straatnummer}" />
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('bestellingNKlantData.straatnummer')}"
+                              th:errors="*{bestellingNKlantData.straatnummer}">straatnummerError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Verpakkingsinfo:&nbsp;</label>
+                        <input class="form-control" type="text" th:field="*{bestellingNKlantData.verpakkingsInformatie}"/>
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('bestellingNKlantData.verpakkingsInformatie')}"
+                              th:errors="*{bestellingNKlantData.verpakkingsInformatie}">verpakkingsInformatieError
+                    </span>
+                    </div>
+                    <hr>
+
+                    <div class="form-group">
+                        <label class="control-label">Lengte*:&nbsp;</label>
+                        <input class="form-control" type="text" th:field="*{schermData.lengte}"/>
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('schermData.lengte')}"
+                              th:errors="*{schermData.lengte}">lengteError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Breedte*:&nbsp;</label>
+                        <input class="form-control" type="text" th:field="*{schermData.breedte}"/>
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('schermData.breedte')}"
+                              th:errors="*{schermData.breedte}">breedteError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Dikte*:&nbsp;</label>
+                        <input class="form-control" type="text" th:field="*{schermData.dikte}" />
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('schermData.dikte')}"
+                              th:errors="*{schermData.dikte}">dikteError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Materiaal Type*:&nbsp;</label>
+                        <input class="form-control" type="text" th:field="*{schermData.materiaalType}"/>
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('schermData.materiaalType')}"
+                              th:errors="*{schermData.materiaalType}">materiaalTypeError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Aantal*:&nbsp;</label>
+                        <input class="form-control" type="number" min="1"  th:field="*{schermData.aantal}" />
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('schermData.aantal')}"
+                              th:errors="*{schermData.aantal}">aantalTypeError
+                    </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="voorkeuren">Voorkeuren</label>
+                        <textarea class="form-control" id="voorkeuren" rows="3" th:field="*{schermData.voorkeuren}"style="width: 40em"/>
+                        <span class="validationError"
+                              th:if="#{fields.hasErrors('schermData.voorkeuren')}"
+                              th:errors="*{schermData.voorkeuren}">voorkeurenTypeError
+                    </span>
+                    </div>
+
+
+                    <div class="container">
+                        <div class="row">
+                            <button class="btn btn-success btn-md" name="schermToevoegen">Scherm toevoegen</button>
+                            <button class="btn btn-primary btn-md" name="bevestig">Bestelling bevestigen</button>
+                        </div>
+                    </div>
+
+                </form>
+                <div th:if="${message2}!=null" class="alert alert-success" role="alert"  th:text="${message2}" style="margin-top: 5%">
+                    &nbsp;
+                </div>
+                <div th:if="${message1}!=null" class="alert alert-danger" role="alert"  th:text="${message1}" style="margin-top: 5%">
+                    &nbsp;
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <h3>Schermen</h3>
+                <table class="table table-bordered well" style="width: 40rem">
+                    <thead>
+                    <tr>
+                        <th class="text-center" scope="col">#</th>
+                        <th class="text-center" scope="col">Lengte</th>
+                        <th class="text-center" scope="col">Breedte</th>
+                        <th class="text-center" scope="col">Dikte</th>
+                        <th class="text-center" scope="col">Materiaal Type</th>
+                        <th class="text-center" scope="col">Aantal</th>
+                        <th class="text-center" scope="col">Voorkeuren</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="scherm : ${schermen}">
+                        <th scope="row" class="text-center" th:text="${schermen.indexOf(scherm)+1}"></th>
+                        <td class="text-center" th:text="${scherm.getLengte()}"></td>
+                        <td class="text-center" th:text="${scherm.getBreedte()}"></td>
+                        <td class="text-center" th:text="${scherm.getDikte()}"></td>
+                        <td class="text-center" th:text="${scherm.getMateriaalType()}"></td>
+                        <td class="text-center" th:text="${scherm.getAantal()}"></td>
+                        <td class="text-center" th:text="${scherm.getVoorkeuren()}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

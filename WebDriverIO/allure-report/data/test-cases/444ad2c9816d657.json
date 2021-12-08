@@ -1,0 +1,227 @@
+{
+  "uid" : "444ad2c9816d657",
+  "name" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
+  "fullName" : "Blog.Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
+  "historyId" : "fb38c1c705e35251925fd8cdf02922b5",
+  "time" : {
+    "start" : 1634520076284,
+    "stop" : 1634520084661,
+    "duration" : 8377
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/url",
+      "time" : {
+        "start" : 1634520076286,
+        "stop" : 1634520084491,
+        "duration" : 8205
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f402a3b44eac9389",
+        "name" : "Request",
+        "source" : "f402a3b44eac9389.json",
+        "type" : "application/json",
+        "size" : 54
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1634520084493,
+        "stop" : 1634520084525,
+        "duration" : 32
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "6f82af39c23da8cd",
+        "name" : "Request",
+        "source" : "6f82af39c23da8cd.json",
+        "type" : "application/json",
+        "size" : 59
+      }, {
+        "uid" : "6186c3d83b6aa6d",
+        "name" : "Response",
+        "source" : "6186c3d83b6aa6d.json",
+        "type" : "application/json",
+        "size" : 83
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 2,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "POST /session/:sessionId/element/0bb2c19b-8d3f-4f95-9d35-8d1fc5cf2896/elements",
+      "time" : {
+        "start" : 1634520084537,
+        "stop" : 1634520084559,
+        "duration" : 22
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "d245a664a83e1316",
+        "name" : "Request",
+        "source" : "d245a664a83e1316.json",
+        "type" : "application/json",
+        "size" : 48
+      }, {
+        "uid" : "536f9575bc42c309",
+        "name" : "Response",
+        "source" : "536f9575bc42c309.json",
+        "type" : "application/json",
+        "size" : 366
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 2,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "GET /session/:sessionId/element/07f4da95-ce35-4d02-8fcf-4ff0cb438610/text",
+      "time" : {
+        "start" : 1634520084572,
+        "stop" : 1634520084587,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "39b90c1bd5add647",
+        "name" : "Response",
+        "source" : "39b90c1bd5add647.json",
+        "type" : "application/json",
+        "size" : 44
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "GET /session/:sessionId/element/d86fc161-a2b2-4b37-9f5b-d77a8dc51489/text",
+      "time" : {
+        "start" : 1634520084589,
+        "stop" : 1634520084610,
+        "duration" : 21
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "982d8ac7db73df3a",
+        "name" : "Response",
+        "source" : "982d8ac7db73df3a.json",
+        "type" : "application/json",
+        "size" : 45
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "GET /session/:sessionId/element/f6d1f714-6276-4717-9b23-b4e8d3087eca/text",
+      "time" : {
+        "start" : 1634520084611,
+        "stop" : 1634520084637,
+        "duration" : 26
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "bbb7b289ac9ee9ec",
+        "name" : "Response",
+        "source" : "bbb7b289ac9ee9ec.json",
+        "type" : "application/json",
+        "size" : 37
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "GET /session/:sessionId/element/ed0efae0-a1ba-4e2e-bdf7-75e53e9ded84/text",
+      "time" : {
+        "start" : 1634520084638,
+        "stop" : 1634520084659,
+        "duration" : 21
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "365c67a9303b317b",
+        "name" : "Response",
+        "source" : "365c67a9303b317b.json",
+        "type" : "application/json",
+        "size" : 43
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 9,
+    "hasContent" : true,
+    "stepsCount" : 7
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Blog"
+  }, {
+    "name" : "testClass",
+    "value" : "Blog"
+  }, {
+    "name" : "testMethod",
+    "value" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4"
+  }, {
+    "name" : "package",
+    "value" : "Blog"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-94.0.4606.81"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "444ad2c9816d657.json",
+  "parameterValues" : [ "chrome-94.0.4606.81" ]
+}

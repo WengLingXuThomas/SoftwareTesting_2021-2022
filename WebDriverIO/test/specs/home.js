@@ -53,7 +53,7 @@ describe('Home', () =>{
         allureReporter.addFeature("Logo verification");
      
         //locate & click logo
-        await $('//img[@alt="Practice E-Commerce Site"]').click();
+        //await $('//img[@alt="Practice E-Commerce Site"]').click();
         await HomePage.imageLogo.click();
 
         // Assert url does not contains get-started text
