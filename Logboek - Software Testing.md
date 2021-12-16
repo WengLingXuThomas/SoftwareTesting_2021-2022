@@ -71,6 +71,27 @@
 ### Week 11 -1,5 uur
 - informeren test tooling voor web & mobile
 
+### Week 12 
+- tussentijdse rapportering
+
+### Week 13 
+- Enrol nieuw angular cursus met gededeelte over testing (unit, integration, e2e)
+    -> https://codewithmosh.com/p/angular-master-class/
+    Doorgenomen secties:
+    - 01- Introduction
+    - 02- What is Automated Testing
+    - 03- Types of Tests
+    - 04- Unit Testing Fundamentals
+    - 05- Working with Strings and Arrays
+    - 06- Setup and Tear Down
+    - 07- Working with Forms
+    - 08- Working with Event Emitters
+    - 09- Working with Spies (mock services)
+
+
+
+
+
     
         
 

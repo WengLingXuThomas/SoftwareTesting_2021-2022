@@ -1,5 +1,5 @@
 [ {
-  "uid" : "457fb113110c5aa0",
+  "uid" : "8570f42a053468c",
   "name" : "Get the text of all menu items & assert them - using wait commands",
   "time" : {
     "start" : 1634522155897,
@@ -9,207 +9,7 @@
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "6913cc6ce661312c",
-  "name" : "Click page logo & assert url does not contains get-started text",
-  "time" : {
-    "start" : 1638911538093,
-    "stop" : 1638911539141,
-    "duration" : 1048
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fee826f57ca87008",
-  "name" : "Open About page & assert url",
-  "time" : {
-    "start" : 1634522159394,
-    "stop" : 1634522164337,
-    "duration" : 4943
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d851ad5b7935342d",
-  "name" : "Open URL & assert title",
-  "time" : {
-    "start" : 1634522153029,
-    "stop" : 1634522158010,
-    "duration" : 4981
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "a0cb615179882522",
-  "name" : "Open Home page & click get started btn & assert url contains get-started text",
-  "time" : {
-    "start" : 1638911537670,
-    "stop" : 1638911538093,
-    "duration" : 423
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "509775e499470f62",
-  "name" : "Find heading element & assert text",
-  "time" : {
-    "start" : 1634522166368,
-    "stop" : 1634522168233,
-    "duration" : 1865
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "db36264e1c6effae",
-  "name" : "Open About page & assert url",
-  "time" : {
-    "start" : 1634522158011,
-    "stop" : 1634522164940,
-    "duration" : 6929
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fe3837520d7aff8a",
-  "name" : "Fill in & submit form, assert succes message",
-  "time" : {
-    "start" : 1635135239818,
-    "stop" : 1635135249616,
-    "duration" : 9798
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "79ae85fe83b87ea5",
-  "name" : "Open URL & assert title",
-  "time" : {
-    "start" : 1638911505763,
-    "stop" : 1638911530976,
-    "duration" : 25213
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "310feccc5bd1f6a7",
-  "name" : "Click page logo & assert url does not contains get-started text",
-  "time" : {
-    "start" : 1634522165352,
-    "stop" : 1634522166368,
-    "duration" : 1016
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "1c2ef6de05214bae",
-  "name" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
-  "time" : {
-    "start" : 1634520078299,
-    "stop" : 1634520084045,
-    "duration" : 5746
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "1199aab1b27288f6",
-  "name" : "Click page logo & assert url does not contains get-started text",
-  "time" : {
-    "start" : 1638911538681,
-    "stop" : 1638911539844,
-    "duration" : 1163
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4d874d3a1fffd17c",
-  "name" : "Fill in & submit form, assert succes message",
-  "time" : {
-    "start" : 1635135238051,
-    "stop" : 1635135248835,
-    "duration" : 10784
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8b247761a2647832",
-  "name" : "Get the text of all menu items & assert them - using wait commands",
-  "time" : {
-    "start" : 1634522152999,
-    "stop" : 1634522157744,
-    "duration" : 4745
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "492448263079692a",
-  "name" : "Open About page & assert url",
-  "time" : {
-    "start" : 1638911530976,
-    "stop" : 1638911537670,
-    "duration" : 6694
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4d5e481e93f12772",
-  "name" : "Find heading element & assert text",
-  "time" : {
-    "start" : 1634522165751,
-    "stop" : 1634522166097,
-    "duration" : 346
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d8d5e3fbdebd769e",
-  "name" : "Find heading element & assert text",
-  "time" : {
-    "start" : 1638911539845,
-    "stop" : 1638911542374,
-    "duration" : 2529
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8606cdd2130e8b9e",
-  "name" : "Find heading element & assert text",
-  "time" : {
-    "start" : 1638911539141,
-    "stop" : 1638911539540,
-    "duration" : 399
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3b09018892ef6a17",
-  "name" : "Open Home page & click get started btn & assert url contains get-started text",
-  "time" : {
-    "start" : 1634522164337,
-    "stop" : 1634522164736,
-    "duration" : 399
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "121cc4ec5beea9aa",
-  "name" : "Open URL & assert title",
-  "time" : {
-    "start" : 1638911503100,
-    "stop" : 1638911528626,
-    "duration" : 25526
-  },
-  "status" : "passed",
-  "severity" : "minor"
-}, {
-  "uid" : "5cd06bcfaeed6748",
-  "name" : "Working with iframe",
-  "time" : {
-    "start" : 1638929652963,
-    "stop" : 1638929670397,
-    "duration" : 17434
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "dee7c4ad2eaa79ac",
+  "uid" : "6c8aed3917a70108",
   "name" : "Open Home page & click get started btn & assert url contains get-started text",
   "time" : {
     "start" : 1634522164941,
@@ -219,67 +19,37 @@
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "5253efd54eeb3de5",
-  "name" : "Fill in & submit form, assert succes message",
+  "uid" : "1010b4fd10f4caf5",
+  "name" : "Get the text of all menu items & assert them - using wait commands",
   "time" : {
-    "start" : 1635130154111,
-    "stop" : 1635130181448,
-    "duration" : 27337
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "e7e87e5efacbe22d",
-  "name" : "Open About page & assert url",
-  "time" : {
-    "start" : 1638911528627,
-    "stop" : 1638911538145,
-    "duration" : 9518
+    "start" : 1634522152999,
+    "stop" : 1634522157744,
+    "duration" : 4745
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "62e0984cb4714ec9",
-  "name" : "Fill in & submit form, assert succes message",
-  "time" : {
-    "start" : 1634522796116,
-    "stop" : 1634522816915,
-    "duration" : 20799
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "3857996202637217",
+  "uid" : "369032913cc28963",
   "name" : "Click page logo & assert url does not contains get-started text",
   "time" : {
-    "start" : 1634522164736,
-    "stop" : 1634522165751,
-    "duration" : 1015
+    "start" : 1638911538093,
+    "stop" : 1638911539141,
+    "duration" : 1048
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "444ad2c9816d657",
-  "name" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
+  "uid" : "57f6033d6d034954",
+  "name" : "Open Home page & click get started btn & assert url contains get-started text",
   "time" : {
-    "start" : 1634520076284,
-    "stop" : 1634520084661,
-    "duration" : 8377
+    "start" : 1638911537670,
+    "stop" : 1638911538093,
+    "duration" : 423
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "ac47cae0026d1f89",
-  "name" : "Working with iframe",
-  "time" : {
-    "start" : 1638929881734,
-    "stop" : 1638929889005,
-    "duration" : 7271
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3561d2c5e2442f7e",
+  "uid" : "eb763c2c2d0aaa5",
   "name" : "Open URL & assert title",
   "time" : {
     "start" : 1634522155897,
@@ -289,7 +59,227 @@
   "status" : "passed",
   "severity" : "minor"
 }, {
-  "uid" : "8a4d8df86804fd78",
+  "uid" : "d7387f173db2501d",
+  "name" : "Open About page & assert url",
+  "time" : {
+    "start" : 1634522159394,
+    "stop" : 1634522164337,
+    "duration" : 4943
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2434b56842cc360e",
+  "name" : "Find heading element & assert text",
+  "time" : {
+    "start" : 1638911539141,
+    "stop" : 1638911539540,
+    "duration" : 399
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dd816f009f95d8",
+  "name" : "Open URL & assert title",
+  "time" : {
+    "start" : 1634522153029,
+    "stop" : 1634522158010,
+    "duration" : 4981
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "dccc8ba0e434e6c8",
+  "name" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
+  "time" : {
+    "start" : 1634520078299,
+    "stop" : 1634520084045,
+    "duration" : 5746
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6a4b77b87e744b05",
+  "name" : "Open About page & assert url",
+  "time" : {
+    "start" : 1638911530976,
+    "stop" : 1638911537670,
+    "duration" : 6694
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7f35aa3159f09bd",
+  "name" : "Open URL & assert title",
+  "time" : {
+    "start" : 1638911505763,
+    "stop" : 1638911530976,
+    "duration" : 25213
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "189d8cb0dc907879",
+  "name" : "Open About page & assert url",
+  "time" : {
+    "start" : 1634522158011,
+    "stop" : 1634522164940,
+    "duration" : 6929
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "78803b0591da4e54",
+  "name" : "Open About page & assert url",
+  "time" : {
+    "start" : 1638911528627,
+    "stop" : 1638911538145,
+    "duration" : 9518
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5e73042dae0300d8",
+  "name" : "Open Home page & click get started btn & assert url contains get-started text",
+  "time" : {
+    "start" : 1634522164337,
+    "stop" : 1634522164736,
+    "duration" : 399
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2825bb09a24811ae",
+  "name" : "Fill in & submit form, assert succes message",
+  "time" : {
+    "start" : 1635135238051,
+    "stop" : 1635135248835,
+    "duration" : 10784
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5fa31ffa2ba00c4b",
+  "name" : "Working with iframe",
+  "time" : {
+    "start" : 1639023490529,
+    "stop" : 1639023520733,
+    "duration" : 30204
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9061195adf15cbe6",
+  "name" : "Working with iframe",
+  "time" : {
+    "start" : 1639023306342,
+    "stop" : 1639023313595,
+    "duration" : 7253
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e70f8546042f1d5",
+  "name" : "Find heading element & assert text",
+  "time" : {
+    "start" : 1638911539845,
+    "stop" : 1638911542374,
+    "duration" : 2529
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f5040579c45da143",
+  "name" : "Fill in & submit form, assert succes message",
+  "time" : {
+    "start" : 1635130154111,
+    "stop" : 1635130181448,
+    "duration" : 27337
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "9fc81385c4d90d4e",
+  "name" : "Fill in & submit form, assert succes message",
+  "time" : {
+    "start" : 1635135239818,
+    "stop" : 1635135249616,
+    "duration" : 9798
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9a6a625f1b3a3e6f",
+  "name" : "Fill in & submit form, assert succes message",
+  "time" : {
+    "start" : 1634522796116,
+    "stop" : 1634522816915,
+    "duration" : 20799
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "d8de7ce8b6b64461",
+  "name" : "Find heading element & assert text",
+  "time" : {
+    "start" : 1634522165751,
+    "stop" : 1634522166097,
+    "duration" : 346
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d61e77c27985a361",
+  "name" : "Working with iframe",
+  "time" : {
+    "start" : 1639023487432,
+    "stop" : 1639023495183,
+    "duration" : 7751
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5226da0e8ce1ba20",
+  "name" : "Get list of recent posts, assert textlength is > 10 & assert total list count = 4",
+  "time" : {
+    "start" : 1634520076284,
+    "stop" : 1634520084661,
+    "duration" : 8377
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "478792e4ff54320b",
+  "name" : "Find heading element & assert text",
+  "time" : {
+    "start" : 1634522166368,
+    "stop" : 1634522168233,
+    "duration" : 1865
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f27fa0b9e9f288fa",
+  "name" : "Click page logo & assert url does not contains get-started text",
+  "time" : {
+    "start" : 1638911538681,
+    "stop" : 1638911539844,
+    "duration" : 1163
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9995030a6810045c",
+  "name" : "Click page logo & assert url does not contains get-started text",
+  "time" : {
+    "start" : 1634522164736,
+    "stop" : 1634522165751,
+    "duration" : 1015
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3b75a6f41c00be6d",
   "name" : "Open Home page & click get started btn & assert url contains get-started text",
   "time" : {
     "start" : 1638911538145,
@@ -298,4 +288,34 @@
   },
   "status" : "passed",
   "severity" : "normal"
+}, {
+  "uid" : "f9c1a1840486f839",
+  "name" : "Working with iframe",
+  "time" : {
+    "start" : 1639023487586,
+    "stop" : 1639023494370,
+    "duration" : 6784
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a757239789021d41",
+  "name" : "Click page logo & assert url does not contains get-started text",
+  "time" : {
+    "start" : 1634522165352,
+    "stop" : 1634522166368,
+    "duration" : 1016
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "85d86d22f35e83ef",
+  "name" : "Open URL & assert title",
+  "time" : {
+    "start" : 1638911503100,
+    "stop" : 1638911528626,
+    "duration" : 25526
+  },
+  "status" : "passed",
+  "severity" : "minor"
 } ]

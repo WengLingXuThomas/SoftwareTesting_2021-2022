@@ -7,7 +7,7 @@
       "name" : "Expect $(`[role=\"alert\"]`) to have text containing\n                \n                Expected: \"Thank you for contacting us! We will be in touch with you shortly\"\n                Received: \"Thanks for contacting us! We will be in touch with you shortly\"",
       "children" : [ {
         "name" : "Fill in & submit form, assert succes message",
-        "uid" : "62e0984cb4714ec9",
+        "uid" : "9a6a625f1b3a3e6f",
         "parentUid" : "3eeb1a8b043dd8221b27ef39cc334ee8",
         "status" : "failed",
         "time" : {
@@ -20,7 +20,7 @@
         "parameters" : [ "chrome-94.0.4606.81" ]
       }, {
         "name" : "Fill in & submit form, assert succes message",
-        "uid" : "5253efd54eeb3de5",
+        "uid" : "f5040579c45da143",
         "parentUid" : "3eeb1a8b043dd8221b27ef39cc334ee8",
         "status" : "failed",
         "time" : {
@@ -33,23 +33,6 @@
         "parameters" : [ "chrome-94.0.4606.71" ]
       } ],
       "uid" : "3eeb1a8b043dd8221b27ef39cc334ee8"
-    }, {
-      "name" : "Expect $(`#site-logo`) to exist\n                \n                Expected: \"exist\"\n                Received: \"not exist\"",
-      "children" : [ {
-        "name" : "Working with iframe",
-        "uid" : "5cd06bcfaeed6748",
-        "parentUid" : "2aaa83f89b5205b194bbf6c6893e47fe",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638929652963,
-          "stop" : 1638929670397,
-          "duration" : 17434
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "firefox-94.0.2" ]
-      } ],
-      "uid" : "2aaa83f89b5205b194bbf6c6893e47fe"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ]

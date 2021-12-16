@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "#primary-menu li[id*=menu]"
-}
