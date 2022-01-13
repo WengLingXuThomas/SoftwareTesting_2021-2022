@@ -74,7 +74,7 @@
 ### Week 12 
 - tussentijdse rapportering
 
-### Week 13 
+### Week 13 - 4 uur
 - Enrol nieuw angular cursus met gededeelte over testing (unit, integration, e2e)
     -> https://codewithmosh.com/p/angular-master-class/
     Doorgenomen secties:
@@ -87,6 +87,15 @@
     - 07- Working with Forms
     - 08- Working with Event Emitters
     - 09- Working with Spies (mock services)
+
+### Week 15 - 15 uur
+- test scenario kiezen Smart apps
+- Aparte test cases definieren
+- uitschrijven integratie testen
+- uitwerken presentatie Smart apps
+- uitwerken presentatie webdriver IO
+
+    
 
 
 

@@ -1,0 +1,38 @@
+.eq-head{
+    display: flex;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size:1rem;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+.eq-head p{
+    margin: 0;
+}
+
+.wrapper{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.eq-controls{
+    display: flex;
+    justify-content: space-between;
+}
+.eq-sliders{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+mat-slider {
+    height:10rem;
+    margin-right: 0.25rem;
+}
+mat-slider:last-of-type {
+    margin-right: 0.7rem;
+}
+
+  

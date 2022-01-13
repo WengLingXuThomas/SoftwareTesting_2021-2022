@@ -1,0 +1,74 @@
+
+
+<div class="mainContainer" [ngClass]="{'hideMV': fullView == true}">
+  <mat-drawer-container class="drawer-container">
+    <mat-drawer #drawer mode="side" [opened]=true>
+      <app-side-nav></app-side-nav>
+    </mat-drawer>
+    
+    <div class="wrapper-container">
+      <mat-toolbar color="primary">
+          <div>
+              <button type="button" class="toolbar-icon" mat-button (click)="drawer.toggle()">
+                <mat-icon aria-hidden="false">menu</mat-icon>
+              </button>
+          </div>
+          <h2>{{navbarTitle}}</h2>
+          
+          <span class="toolbar-spacer"></span>
+
+          <div *ngIf="myMusicviewInView == true" class="toolbar-buttonWrapper">
+            <mat-spinner [diameter]="23" color="accent" *ngIf="showSpinner == true"></mat-spinner>
+            <button mat-icon-button (click)="openDirPicker()" *ngIf="showSpinner == false && showFolderButton == true"  class="toolbar-icon">
+              <mat-icon>folder_open</mat-icon>
+            </button>
+  
+            <button (click)="openBottomSheet()" mat-icon-button class="toolbar-icon" >
+              <mat-icon>equalizer</mat-icon>
+            </button>
+  
+         <!--    <button mat-icon-button class="toolbar-icon" >
+              <mat-icon>sort</mat-icon>
+            </button> -->
+            <mat-form-field *ngIf="showSearchBox" appearance="standard">
+              <input matInput #searchInp (keydown.enter)="toggleSearchBox()" placeholder="Search">
+            </mat-form-field>
+            <button mat-icon-button class="toolbar-icon" (click)="toggleSearchBox()">
+              <mat-icon>search</mat-icon>
+            </button>
+          </div>
+
+      </mat-toolbar>
+      <mat-progress-bar *ngIf="false" color="accent" mode="indeterminate"></mat-progress-bar>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+
+  </mat-drawer-container>
+
+  <div class="pip" [ngClass]="{'hidePiP': PiPstatus == false}">
+    <div  [ngStyle]="{ 'background-color': Theme.headingColor}" class="example-box" cdkDragBoundary=".mainContainer" cdkDrag>
+      <div class="boxHeader">
+        <p class="titlePiP"></p>
+        <button class="close" mat-button [disableRipple]='true' (click)="onNoClick()">X</button>
+      </div>
+      <div class="iframeWrapper">
+        <iframe #mypip *ngIf="iFrameData.ID != ''" id="frame_{{iFrameData.ID}}" src=""
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <app-audio-player></app-audio-player>
+  </footer>
+</div>
+
+<div [ngClass]="{'showFV': fullView == true, 'hideFV': fullView == false}" class="subContainer">
+  <app-fullview></app-fullview>
+</div>
+

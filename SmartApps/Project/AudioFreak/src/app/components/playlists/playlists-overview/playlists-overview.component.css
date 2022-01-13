@@ -1,0 +1,34 @@
+.wrapper{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
+
+.bold{
+    font-weight: bold !important;
+    align-self: center;
+}
+
+.ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+mat-selection-list{
+    padding-top: 0;
+}
+
+.optionWrap{
+    display: flex;
+    justify-content: space-between
+
+}
+
+.btnFab{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+}

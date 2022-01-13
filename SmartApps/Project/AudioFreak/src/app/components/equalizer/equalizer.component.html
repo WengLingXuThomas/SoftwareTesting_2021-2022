@@ -1,0 +1,88 @@
+<mat-toolbar class="eq-head" color="primary">
+    <p>Equalizer</p>
+    <mat-slide-toggle #power [checked]="eqEnabled" (input)="onEQToggle()"></mat-slide-toggle>
+</mat-toolbar>
+<div class="wrapper">
+    <div class="eq-controls">
+        <mat-form-field>
+            <mat-label>PRESETS</mat-label>
+            <mat-select #select (selectionChange)="onPresetSelect($event)">
+                <mat-option  value="acoustic">
+                    Acoustic
+                </mat-option>
+                <mat-option  value="bass reducer">
+                    Bass Reducer
+                </mat-option>
+                <mat-option  value="bass booster">
+                    Bass Booster
+                </mat-option>
+                <mat-option  value="classical">
+                    Classical
+                </mat-option>
+                <mat-option  value="dance">
+                    Dance
+                </mat-option>
+                <mat-option  value="deep">
+                    Deep
+                </mat-option>
+                <mat-option  value="electronic">
+                    Electronic
+                </mat-option>
+                <mat-option  value="flat">
+                    Flat
+                </mat-option>
+                <mat-option  value="hip-hop">               
+                    Hip-Hop
+                </mat-option>
+                <mat-option  value="jazz">
+                    Jazz
+                </mat-option>
+                <mat-option  value="loudness">
+                    Loudness
+                </mat-option>
+                <mat-option  value="piano">
+                    Piano
+                </mat-option>
+                <mat-option  value="pop">
+                    Pop
+                </mat-option>
+                <mat-option  value="rnb">                 
+                    RnB
+                </mat-option>
+                <mat-option  value="rock">
+                    Rock
+                </mat-option>
+                <mat-option  value="treble booster">                   
+                    Treble Booster
+                </mat-option>
+                <mat-option  value="treble reducer">                   
+                    Treble Reducer
+                </mat-option>
+                <mat-option  value="vocal booster">
+                    Vocal Booster
+                </mat-option>
+              <!--   <mat-option  value="manual">
+                    Manual
+                </mat-option> -->
+            </mat-select>
+        </mat-form-field>
+        <div>
+            <button mat-icon-button (click)="reset()">
+                <mat-icon>refresh</mat-icon>
+            </button>
+      <!--       <button mat-icon-button (click)="savePreset()" [disabled]="disableSave">
+                <mat-icon>save</mat-icon>
+            </button> -->
+        </div>
+    </div>
+    <div class="eq-sliders">
+        <mat-slider #slider #s0 (input)="onSliderValueChange($event)" vertical thumbLabel [displayWith]="formatLabel" id="s0" value="0" step="0.5" min="-15" max="15"></mat-slider>
+        <mat-slider #slider (input)="onSliderValueChange($event)" vertical thumbLabel [displayWith]="formatLabel" id="s1" value="0" step="0.5" min="-15" max="15"></mat-slider>
+        <mat-slider #slider (input)="onSliderValueChange($event)" vertical thumbLabel [displayWith]="formatLabel" id="s2" value="0" step="0.5" min="-15" max="15"></mat-slider>
+        <mat-slider #slider (input)="onSliderValueChange($event)" vertical thumbLabel [displayWith]="formatLabel" id="s3" value="0" step="0.5" min="-15" max="15"></mat-slider>
+        <mat-slider #slider (input)="onSliderValueChange($event)" vertical thumbLabel [displayWith]="formatLabel" id="s4" value="0" step="0.5" min="-15" max="15"></mat-slider>
+        <mat-slider #slider (input)="onSliderValueChange($event)" vertical thumbLabel [displayWith]="formatLabel" id="s5" value="0" step="0.5" min="-15" max="15"></mat-slider>
+        <mat-slider #slider (input)="onSliderValueChange($event)" vertical thumbLabel [displayWith]="formatLabel" id="s6" value="0" step="0.5" min="-15" max="15"></mat-slider>
+        <mat-slider #slider (input)="onSliderValueChange($event)" vertical thumbLabel [displayWith]="formatLabel" id="s7" value="0" step="0.5" min="-15" max="15"></mat-slider>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="wrapper">
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <mat-grid-list cols="3" rowHeight=100% style="width: 100%;">
+                <mat-grid-tile>
+                    <div style="width: 100%; height: 100%;">
+                        <button type="button" class="toolbar-icon" (click)="back()" mat-button>
+                            <mat-icon>arrow_back</mat-icon>
+                        </button>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <h3>Results for "{{searchTerm}}"</h3>
+                </mat-grid-tile>
+                <mat-grid-tile></mat-grid-tile>
+              </mat-grid-list>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-divider></mat-divider>
+    <div class="content">
+        <div class="coverCarousel" *ngIf="showCarousel === true">
+            <carousel [height]="140" [margin]="5" [cellWidth]="140">
+                <div style="width: 140px!important;" class="carousel-cell" (click)="onTouchDevice && routeAlbumView(album.album.ID, album.album.Name)" (dblclick)="routeAlbumView(album.album.ID, album.album.Name)" *ngFor="let album of albumResults">
+                    <mat-label matTooltipTouchGestures="on" matTooltip={{album.album.Name}}>
+                        <img  draggable="false"  [defaultImage]="defaultImgURL" [lazyLoad]="album.coverData != null ? album.coverData : defaultImgURL" />
+                    </mat-label>
+                </div>
+            </carousel>
+        </div>
+        <mat-divider></mat-divider>
+        <mat-tab-group  class="maxHeight mat-tab-fill-height" [animationDuration]="'0ms'">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <span [matBadge]="tracksResultCount" matBadgeOverlap="false">Tracks</span>
+                </ng-template>
+                <div class="tracklist" style="border-top: 1px solid black;">
+                    <app-tracklist [showArtistCol]="true" [showAlbumCol]="true"  [tracks]="tracksResults"></app-tracklist>
+                </div>   
+            </mat-tab>
+            <mat-tab *ngIf="showArtists === true">
+                <ng-template mat-tab-label>
+                    <span [matBadge]="artistResultCount" matBadgeOverlap="false">Artists</span>
+                </ng-template>
+                <mat-divider></mat-divider>
+                <cdk-virtual-scroll-viewport  orientation='vertical'  [itemSize]="48"  style="height: 99%; width: 100%;">
+                    <mat-selection-list  #artists [multiple]="false">
+                        <mat-list-option *ngFor="let item of artistResults" [value]="item" (click)="routeArtistView(item.ID, item.Name)">
+                            <span class="bold ellipsis">{{item.Name}}</span>
+                        </mat-list-option>
+                      </mat-selection-list>
+                </cdk-virtual-scroll-viewport>
+            </mat-tab>
+        </mat-tab-group>       
+    </div>
+
+<!--     <div *ngIf="noResults == true" class="noResultsDiv">
+        <span class="spanNoResults">No results found!</span>
+    </div> -->
+</div>

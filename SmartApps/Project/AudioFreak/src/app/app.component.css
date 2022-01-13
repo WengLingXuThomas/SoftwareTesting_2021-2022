@@ -1,0 +1,155 @@
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+.toolbar-icon{
+      border: none;
+}
+.mat-drawer{
+    width: 225px;
+}
+
+.wrapper-container{
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.content{
+    flex: 1;
+    overflow:auto;
+}
+
+.mainContainer{
+    display: flex;
+    height: 100%;
+    flex-flow: column;
+}
+
+.drawer-container{
+    flex: 1 1 auto;
+}
+
+footer{ 
+    flex: 0 1 103px;
+}
+
+.subContainer{
+    display: flex;
+    max-height: 0;
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    flex-flow: column;
+    z-index: 10000;
+}
+.hideFV{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+}
+
+.showFV{
+    display: flex;
+    max-height: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.hideMV{
+    display: none;
+}
+
+app-fullview{
+    height: 100%;
+}
+
+
+.showPiP{
+    display: flex;
+}
+
+.example-box {
+    width: 400px;
+    height: 325px;
+    /*background-color: #74b53f;*/
+    color: rgba(0, 0, 0, 0.87);
+    cursor: move;
+    display: flex;
+    flex-flow: column nowrap;
+    bottom:100px;
+    right: 20px;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0;
+    transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  .example-box:active {
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+  
+.hidePiP{
+      display: none;
+}
+.pip{
+    z-index: 2;
+}
+  .boxHeader{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 7%;
+  }
+.close{
+  padding-right: 10px;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  height: -webkit-fill-available;
+  align-items: center;
+  width: fit-content;
+}
+.titlePiP{
+  margin:0;
+  padding-left: 1%;
+  color: white;
+}
+
+.toolbar-buttonWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iframeWrapper{
+    height: 93%;
+    width: 100%;
+}
+
+.iframeWrapper iframe{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 500px) {
+    
+    .example-box {
+        width: 250px;
+        height: 200px;
+    }
+
+}
+

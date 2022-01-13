@@ -1,0 +1,40 @@
+.wrapper{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
+
+.bold{
+    font-weight: bold !important;
+}
+
+.ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+mat-selection-list{
+    padding-top: 0;
+}
+
+.noData{
+    color: rgba(128, 128, 128, 0.486);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    font-style: italic;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;     
+}
+
+.middle{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}

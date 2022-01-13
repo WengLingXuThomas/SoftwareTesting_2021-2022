@@ -1,0 +1,39 @@
+.creator-card {
+    max-width: 35%;
+  }
+p{
+    text-align: center;
+}
+#Creators{
+    display: flex;
+    width: 60%;
+    gap: 5%;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+}
+
+.wrapper{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    text-align: center;
+    width: 80%;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: blue;
+}
+
+mat-expansion-panel{
+    width: 100%;
+}
+mat-accordion{
+    width: 80%;
+    margin-bottom: 5%;
+}

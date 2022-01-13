@@ -1,0 +1,13 @@
+.vi-head{
+    display: flex;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size:1rem;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    height:5rem;
+}
+.vi-head p{
+    margin: 0;
+}

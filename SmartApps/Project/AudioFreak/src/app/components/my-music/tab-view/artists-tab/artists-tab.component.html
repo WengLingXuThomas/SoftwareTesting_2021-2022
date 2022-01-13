@@ -1,0 +1,58 @@
+<!-- <div class="wrapper">
+  <mat-grid-list cols="1" rowHeight="100%">
+    <mat-grid-tile style="overflow: auto;">
+      <mat-list>
+
+        <div *ngFor="let letter of Alfabet">
+          <mat-divider></mat-divider>
+          <div mat-subheader class="clasifier">{{letter}}</div>
+          <mat-divider></mat-divider>
+          <div *ngIf="Artists != undefined">
+            <mat-list-item (click)="routeArtistView(orderedArtist.ID, orderedArtist.Name)" [attr.data-artist_id]=orderedArtist.ID *ngFor="let orderedArtist of orderArtists(letter) | orderBy:'Name'">
+                <div mat-line>{{orderedArtist.Name}}</div>
+            </mat-list-item>
+          </div>
+        </div>
+      </mat-list>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div> -->
+
+<div class="wrapper">
+  <div class="actionbar">
+    <div>
+      <button mat-button (click)="accordion.closeAll()">Collapse All</button>
+      <button mat-button (click)="accordion.openAll()">Expand All</button>
+    </div>
+    <span class="toolbar-spacer"></span>
+    <mat-divider [vertical]="true" ></mat-divider>
+    <div>
+      <button mat-button class="letterBtn" (click)="scrollTo('panel-'+letter)"   *ngFor="let letter of Alfabet">{{letter}}</button>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-grid-list cols="1" rowHeight="100%">
+    <mat-grid-tile style="overflow: auto;">
+      <mat-list>
+          <mat-accordion [multi]="true">
+            <mat-expansion-panel [expanded]=false *ngFor="let letter of Alfabet" #expPanel [id]="'panel-'+letter">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="clasifier">
+                  {{letter}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-divider></mat-divider>
+              <div *ngIf="Artists != undefined">
+                <mat-list-item (click)="routeArtistView(orderedArtist.ID, orderedArtist.Name)" [attr.data-artist_id]=orderedArtist.ID *ngFor="let orderedArtist of orderArtists(letter) | orderBy:'Name'">
+                    <div mat-line>{{orderedArtist.Name}}</div>
+                </mat-list-item>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+      </mat-list>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+
+

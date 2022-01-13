@@ -1,0 +1,15 @@
+<div class="wrapper" *ngIf="noGenres == false">
+    <cdk-virtual-scroll-viewport orientation='vertical'  [itemSize]="48"  style="height: 100%; width: 100%;">
+        <mat-selection-list #albums [multiple]="false">
+            <mat-list-option *ngFor="let item of Genres" [value]="item" (click)="routeGenreView(item.ID, item.Genre)">
+                <span class="bold ellipsis">{{item.Genre}}</span>
+            </mat-list-option>
+          </mat-selection-list>
+    </cdk-virtual-scroll-viewport>
+</div>
+
+<div class="wrapper" *ngIf="noGenres == true">
+    <div class="middle">
+        <span class="noData">No genres found</span>
+    </div>
+</div>

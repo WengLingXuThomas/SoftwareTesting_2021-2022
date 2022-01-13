@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="content">
+        <div class="songInfo">
+            <p>{{songData.title}}</p>
+            <p>{{songData.artist}}</p>
+        </div>
+        <div *ngIf="noLyrics == true"  class="noData">
+            <div class="noDataMiddlewrap" *ngIf="isFetchingLyrics == false" (click)="FetchLyrics()">
+                <img src="../../../../assets/images/search_doc.webp">
+                <p>no lyric found</p>
+            </div>
+            <mat-spinner *ngIf="isFetchingLyrics == true"></mat-spinner>
+        </div>
+        <ng-scrollbar *ngIf="noLyrics == false" [visibility]="'hover'" class="lyricsText">
+            <div [ngClass]="{'betterContrast':toggleReadability === true}">
+                {{lyrics}}
+            </div>
+        </ng-scrollbar>
+    </div>
+</div>

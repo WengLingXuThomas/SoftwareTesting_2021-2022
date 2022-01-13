@@ -1,0 +1,91 @@
+.wrapper{
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+.header{
+    /*border: 3px solid #a8c023;*/
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+}
+.example-form-field {
+    /*border: 3px solid #8521ad;*/
+    width: 400px;
+}
+#buttons{
+    /*border: 3px solid #ad3621;*/
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.searchButton{
+    margin: 0% 1%;
+}
+
+
+.container{
+    /*border: 3px solid #73AD21;*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 1 auto;
+    overflow: auto;
+    height: 350px;
+}
+
+
+
+.video{
+    margin-left: 2%;
+}
+.example-card {
+    margin: 1% 0.5%;
+    max-width: 20%;
+}
+  
+.cardContent{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-flow: column;
+        justify-content: flex-start;
+    }
+    .example-form-field {
+        width: 95%;
+    }
+    .example-card {
+        margin: 2% 3% !important;
+        max-width: 100% !important;
+    }
+    button{
+        margin-top: 6px !important;
+    }
+}
+
+
+#VidTitle {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@supports (-webkit-line-clamp: 2) {
+    #VidTitle {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}

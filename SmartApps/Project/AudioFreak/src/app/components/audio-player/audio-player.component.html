@@ -1,0 +1,102 @@
+<div [style.background-color]="themeColor" class="audioPlayer" [ngClass]="{'hidden': showMinimalAudioControl == true, 'show': showMinimalAudioControl == false}" >
+  <mat-grid-list cols="3" rowHeight=100% >
+    <mat-grid-tile>
+      <div class="divWrapperInfo" (click)="toggleFullView()">
+        <img class="miniCover" #miniCover1>
+        <div style="width:85% ;">
+          
+          <div #currentSongEl class="marquee">
+            <div style="font-size:1.2em">
+              {{currentSong}}
+            </div>  
+          </div>
+          
+          <div #currentArtistEl class="marquee">
+            <div style="font-weight: bold; font-size:1.2em">
+              {{currentArtist}}
+            </div>  
+          </div> 
+        </div>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="mediaControls">
+        <div class="controlButtons">
+          <button [ngClass]="{'toggleStyle':shuffleOn == true}" class="shuffleBtn" (click)="toggleShuffle()" mat-icon-button>
+            <mat-icon>shuffle</mat-icon>
+          </button>
+          <button mat-icon-button [disabled]="disableControls" class="prevBtn" (click)="previousTrack()">
+            <mat-icon>skip_previous</mat-icon>
+          </button>
+          <button mat-icon-button class="playIcon togglePlayBtn" [disabled]="disableControls" (click)="togglePlay()">
+            <mat-icon *ngIf="isPlaying == false">play_circle_outline</mat-icon>
+            <mat-icon *ngIf="isPlaying == true">pause_circle_filled</mat-icon>
+          </button>
+          <button mat-icon-button [disabled]="disableControls" class="nextBtn" (click)="nextTrack()">
+            <mat-icon>skip_next</mat-icon>
+          </button>
+          <button [ngClass]="{'toggleStyle':repeatOn == true}" class="repeatBtn" (click)="toggleRepeat()"  mat-icon-button>
+            <mat-icon>replay</mat-icon>
+          </button>
+        </div>
+        <div class="divWrapper playbackSlider">
+          <span id="currentTime" class="time">{{currentTime}}</span>
+          <mat-slider #seekslider class="currentTimeSldr" (valueChange)="changeCurTime($event)" [disabled]="disableControls"  [min]="minTime" [max]="maxTime" [(value)]="timeSliderVal" step="1" style="width:100%"></mat-slider>
+          <span id="totalDuration" class="time">{{duration}}</span>
+          <audio (timeupdate)="onPlaying($event)" (canplay)="onCanplay()" (loadedmetadata)="getMetaFromInput($event)" (ended)="onTrackEnded($event)" id="audio" #audio></audio>
+        </div>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="controlOptions">
+        <button class="muteBtn" #muteBtn mat-icon-button (click)="onMute()">
+          <mat-icon *ngIf="isMuted == true">volume_off</mat-icon>
+          <mat-icon *ngIf="isMuted == false">volume_up</mat-icon>
+        </button>
+        <mat-slider #volumeControl class="volumeSlider" min="0" max="100" [value]=volume step="1" (change)="adjustVolume($event)" aria-label="unit(s)"></mat-slider>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+
+
+<!-- minimal version for smaller width screen -->
+<div  [style.background-color]="themeColor" class="audioPlayer"  [ngClass]="{'hidden': showMinimalAudioControl == false, 'show': showMinimalAudioControl == true}">
+  <mat-grid-list cols="4" rowHeight=100% >
+    <mat-grid-tile class="imgTile">
+      <div class="divWrapperInfoMin">
+        <img class="miniCoverMin" #miniCover2 src="../../../assets/images/no_album_art.jpg">   
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan=2 style="padding-left:10px;">
+      <div class='minInfo' style="width:90%;">
+        <div #currentSongElmin class="marquee">
+          <div style="font-size:1em">
+            {{currentSong}}
+          </div>  
+        </div>
+        
+        <div #currentArtistElmin class="marquee">
+          <div style="font-weight: bold; font-size:1em">
+            {{currentArtist}}
+          </div>  
+        </div>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="mediaControls">
+        <div class="controlButtons">
+          <button mat-icon-button class="playIcon" [disabled]="disableControls" (click)="togglePlay()">
+            <mat-icon *ngIf="isPlaying == false">play_arrow</mat-icon>
+            <mat-icon *ngIf="isPlaying == true">pause</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

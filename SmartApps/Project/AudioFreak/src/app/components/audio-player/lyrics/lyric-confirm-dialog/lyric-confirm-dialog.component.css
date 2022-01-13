@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.lyricText{
+    white-space: pre-wrap;
+    text-align: center;
+    font-style: italic;
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+}
+
+.lyric-form{
+    margin-top:1em;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.lyricsText{
+ height: 12em;
+ white-space: pre-wrap;
+ text-align: center;
+}
+
+.full-width {
+    margin-top: 1em;
+    width: 100%;
+}
+
+textarea{
+    height: 15em;
+}
+

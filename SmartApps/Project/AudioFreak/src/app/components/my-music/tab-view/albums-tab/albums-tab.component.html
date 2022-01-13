@@ -1,0 +1,37 @@
+<div class="wrapper" *ngIf="showListView == false && noAlbums == false">
+    <virtual-scroller #scroll [items]="Albums" [bufferAmount]=8  [scrollAnimationTime]=0>
+            <div (click)="routeAlbumView(item.album.ID, item.album.Name)" class="itemWrap" *ngFor="let item of scroll.viewPortItems; trackBy: myTrackByFunction;">
+                <div class="image-list__item">
+                    <!-- <img class="cover" [src]="item.coverData != null ? domSrv.bypassSecurityTrustUrl(item.coverData) : defaultImgURL"> -->
+                    <img class="cover" [defaultImage]="defaultImgURL" [lazyLoad]="item.coverData != null ? item.coverData : defaultImgURL" />
+                    <mat-label matTooltip={{item.album.Name}}>
+                        <p class="text-label-album twoliner">{{item.album.Name}}</p>
+                    </mat-label>
+                    <mat-label matTooltip={{item.artist}}>
+                        <p class="text-label-artist">{{item.artist}}</p>
+                    </mat-label>
+                </div>
+            </div>
+    </virtual-scroller>
+</div>
+
+<div class="wrapper" *ngIf="showListView == true && noAlbums == false">
+    <cdk-virtual-scroll-viewport orientation='vertical'  [itemSize]="56"  style="height: 100%; width: 100%;">
+        <mat-selection-list #albums [multiple]="false">
+            <mat-list-option *ngFor="let item of Albums" [value]="item" (click)="routeAlbumView(item.album.ID, item.album.Name)">
+                <mat-icon mat-list-icon>
+                    <img class="albumIcon" [defaultImage]="defaultImgURL" [lazyLoad]="item.coverData != null ? item.coverData : defaultImgURL" />
+                </mat-icon>
+                <span class="bold ellipsis">{{item.album.Name}}</span>
+                <span class="ellipsis">{{item.artist}}</span>
+            </mat-list-option>
+          </mat-selection-list>
+    </cdk-virtual-scroll-viewport>
+</div>
+
+<div class="wrapper" *ngIf="noAlbums == true">
+    <div class="middle">
+        <span class="noData">No albums found</span>
+    </div>
+</div>
+

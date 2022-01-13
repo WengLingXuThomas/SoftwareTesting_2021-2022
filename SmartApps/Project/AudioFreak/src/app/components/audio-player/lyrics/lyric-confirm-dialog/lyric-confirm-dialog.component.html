@@ -1,0 +1,55 @@
+<h1 *ngIf="modifyLyrics == false" mat-dialog-title>Lyric found!</h1>
+<h1 *ngIf="modifyLyrics == true" mat-dialog-title>Manual change</h1>
+<div mat-dialog-content>
+    <div *ngIf="modifyLyrics == false" class="wrapper">
+        <h2>Is the following lyric correct?</h2>
+        <p class="lyricText">{{data.lyricText}}</p>
+    </div>
+    <div *ngIf="modifyLyrics == true" class="wrapper">
+        <mat-stepper [linear]="false" #stepper (selectionChange)="resetSetLyric()">
+            <mat-step [completed]=false  label="Manual search" state="1">
+                <div class="lyric-form">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Song title</mat-label>
+                      <input matInput placeholder="Ex. never gonna give you up" (ngModelChange)="onInputChange()" [(ngModel)]='searchTitle'>
+                    </mat-form-field>
+                  
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Artist</mat-label> 
+                        <input matInput placeholder="Ex. rick astley" (ngModelChange)="onInputChange()" [(ngModel)]='searchArtist'>
+                    </mat-form-field>
+                </div>
+                <ng-scrollbar *ngIf="modifiedLyrics != ''" [visibility]="'hover'" class="lyricsText">
+                    {{modifiedLyrics}}
+                </ng-scrollbar>
+            </mat-step>
+            <mat-step [completed]=false label="Manual paste" state="2">
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Paste lyrics here...</mat-label>
+                    <textarea matInput [(ngModel)]='modifiedLyrics' (ngModelChange)="onTxtAreaChange()"></textarea>
+                </mat-form-field>
+            </mat-step>
+        
+            <ng-template matStepperIcon="1">
+                <mat-icon>search</mat-icon>
+            </ng-template>
+            <ng-template matStepperIcon="2">
+                <mat-icon>content_copy</mat-icon>
+            </ng-template>
+        </mat-stepper>
+    </div>
+</div>
+<div mat-dialog-actions style="justify-content: center;">
+  <button *ngIf="modifyLyrics == false" mat-button [mat-dialog-close]="{resp:'correct'}">Yes</button>
+  <button *ngIf="modifyLyrics == false" mat-button (click)="modifyLyrics = true">No</button>
+  <button *ngIf="modifyLyrics == true" mat-button (click)="modifyLyrics = false">Back</button>
+  <button *ngIf="modifyLyrics == true" mat-button (click)="searchLyrics()" [disabled]=disableSearch>
+      <span *ngIf="showSpinner == false">Search</span> 
+      <mat-spinner [diameter]="23" color="accent" *ngIf="showSpinner == true"></mat-spinner>
+  </button>
+  <button *ngIf="modifyLyrics == true" mat-button (click)="clearResults(false)"[disabled]=disableClear>Clear</button>
+  <button *ngIf="modifyLyrics == true" mat-button (click)="saveModLyrics()" [disabled]=disableSave>Save</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</div>
+
+

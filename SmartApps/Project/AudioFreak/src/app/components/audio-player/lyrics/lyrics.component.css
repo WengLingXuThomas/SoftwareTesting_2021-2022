@@ -1,0 +1,75 @@
+.wrapper{
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.songInfo{
+    display: flex;
+    flex: 0 1 65px;
+    flex-flow: column;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    -webkit-text-fill-color: white; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.songInfo p:first-of-type{
+    margin-top:0.5em;
+}
+
+.lyricsText{
+    display: flex;
+    white-space: pre-wrap;
+    height: 0px;
+    width: 100%;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    text-align: center;
+}
+.noData{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.noDataMiddlewrap{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.noData p{
+    font-style: italic;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #434349;
+}
+
+img{
+    object-fit: contain;
+    width: 6em;
+    opacity: 0.35;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.betterContrast{
+    background: #020202c2;
+}

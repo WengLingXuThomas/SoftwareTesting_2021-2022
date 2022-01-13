@@ -1,0 +1,318 @@
+.wrapper {
+    display: none;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.showFV{
+    display: flex;
+}
+
+.bgDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background-repeat: no-repeat;
+    background-size: cover; 
+    z-index: -1;
+}
+
+.bgDiv::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: grayscale(35%) blur(25px);
+    pointer-events: none; /* make the overlay click-through */
+}
+
+img{ 
+    height: -webkit-fill-available;
+    margin-top: 1em;
+    width:auto;
+    filter: blur(0);
+    border-radius: 2%;
+    border: 0.5px solid black;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* height:5%; */
+    flex: 0 1 50px;
+    color: white;
+}
+
+.middle{
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 auto;
+}
+
+.controlsWrap{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 100%;
+  /*   height: 20%; */
+    flex: 0 1 103px;
+}
+
+.maxHeight{
+    height: 100%;
+}
+
+.btnVisualizer{
+    margin-right: 1rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.btnEQ{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.btnVol{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.btnMinimize{
+    margin-left: 1rem;
+    height: 100%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.imgWrap{
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.songInfo{
+    flex: 0 1 100px;
+    display: flex;
+    flex-flow: column;
+    font-size: clamp(1.3rem, 1.03404255325rem + 1.418439716vw, 1.8rem);
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+}
+
+.songInfo p{
+    color: white;
+    -webkit-text-fill-color: white; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.middleWrap{
+    height:100%; 
+    display: flex;
+    flex-flow: column;
+}
+app-lyrics{
+    width: 70vw;
+    height: 100%;
+}
+
+.tabHeaders{
+    font-weight: bold;
+    font-size: 1.8em;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.lyricsWrap{
+    display: flex;
+    height:100%; 
+    justify-content: center;
+}
+
+
+.mediaControls{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.controlButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divWrapper{
+    display: flex;  
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.playbackSlider{
+    width: 100%;
+}
+
+mat-slider{
+    width: 89% !important;
+    margin: 0 2px;
+}
+
+
+.spanLabel{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 1.5rem;
+}
+
+.visContainer{
+    background: black;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+app-visualizer{
+    width: 100%;
+    height: 100%;
+}
+
+.showVis{
+    display:flex;
+}
+
+.hideTabs{
+    display: none;
+}
+
+.actionIconBtn{
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+}
+
+.dottedBtn{
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 2.1em;
+}
+
+.toggleStyle{
+    background: #3b3b3b8a;
+}
+
+.controlOptions{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.IconBorder{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+
+@media (min-width: 300px) {
+    img{ 
+        height: 16em;
+    }
+    mat-slider{
+        width: 50% !important;
+    }
+}
+
+@media (min-width: 400px) {
+    img{ 
+        height: 20em;
+    }
+}
+
+@media (min-width: 400px) {
+    img{ 
+        height: 20em;
+    }
+}
+
+@media (min-width: 600px) {
+    img{ 
+        height: 25em;
+    }
+}
+
+@media (min-width: 800px) {
+    img{ 
+        height: 30em;
+    }
+}
+
+@media (min-width: 1000px) {
+    img{ 
+        height: 35em;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    img{ 
+        height: 29em;
+    }
+}
+@media (min-width: 1200px) {
+    img{ 
+        height: 29em;
+    }
+}
+
+@media (min-width: 500px) {
+    mat-slider{
+        width: 70% !important;
+    }
+}
+
+@media (min-width: 750px) {
+    mat-slider{
+        width: 78% !important;
+    }
+}
+
+@media (min-width: 900px) {
+    mat-slider{
+        width: 85% !important;
+    }
+}
+
+@media (min-width: 1500px) {
+    mat-slider{
+        width: 89% !important;
+    }
+}
+
+/* Compound Media Queries */
+
+/* @media (min-width: 300px) and (min-height: 300px){
+    img{ 
+        height: 3em;
+    }
+    .songInfo{
+        flex: 0 1 70px;
+        font-size: 1.9em;
+    }
+} */

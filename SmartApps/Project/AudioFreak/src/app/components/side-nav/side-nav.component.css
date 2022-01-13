@@ -1,0 +1,11 @@
+.toolbar-spacer {
+    flex: 1 1 auto;
+  }
+.toolbar-icon{
+      border: none;
+}
+.logo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

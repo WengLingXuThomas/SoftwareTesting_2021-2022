@@ -1,0 +1,116 @@
+
+
+
+
+
+<script>
+    import { MOCKDATA } from 'src/app/interfaces/mock-PeriodicElement';
+    import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+    //Data classes aanmaken
+    export interface Song{
+      Title: string,
+      Artist: string,
+      Album: string,
+    }
+ 
+    //input waarde declaratie voor de no matching data
+    public input:string = "";
+
+    data = new MatTableDataSource(MOCKDATA);
+
+
+    //Methode 1 voor aanspreking firestore
+  /*
+    items: Observable<any[]>;
+    constructor(firestore: AngularFirestore) {
+      this.items = firestore.collection('Songs').valueChanges();
+      this.items.forEach(element => {
+        console.log(element)
+      });
+      console.log(this.items)
+    }*/
+
+    //Methode 2
+ /*    private itemsCollection: AngularFirestoreCollection<Song>;
+    songs: Observable<Song[]>;
+    constructor(private afs: AngularFirestore) {
+      this.itemsCollection = afs.collection<Song>('Songs');
+      this.songs = this.itemsCollection.valueChanges();
+
+      this.orderSongs(this.UnorderedSongs);
+    } */
+    
+
+    // .filter bestaat niet op de songs: Observable<Song[]>
+    applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.input = filterValue;
+
+    this.data.filter = filterValue.trim().toLowerCase();
+    this.songs.filter = filterValue.trim().toLowerCase();
+    
+    }
+
+</script>
+
+
+
+<script>
+   audioMotion:any;
+
+audioMotionVis(){
+
+ // callback function
+ const energyMeters = (analyzer:any) => {
+  const canvas     = this.audioMotion.canvas,
+        ctx        = this.audioMotion.canvasCtx,
+        pixelRatio = this.audioMotion.pixelRatio,
+        baseSize   = Math.max( 20 * pixelRatio, canvas.height / 27 | 0 ),
+        centerX    = canvas.width >> 1,
+        centerY    = canvas.height >> 1;
+
+        const now = performance.now();
+
+
+  if ( now - timeElapsed > 100 ) {
+    timeElapsed = now;
+    const colorStops = [],
+          offset = timeElapsed / 10 % 360;
+    
+    for ( let i = 360; i >= 0; i -= 60 )
+      colorStops.push( `hsl( ${ offset + i }, 100%, 50% )` );
+    
+    // re-register gradient
+    analyzer.registerGradient( 'rainbow', {
+        dir: 'h',
+        colorStops
+    });
+  }
+
+}
+
+  // instantiate analyzer
+  this.audioMotion = new AudioMotionAnalyzer(
+    this.parentDiv.nativeElement,
+    {
+      source: this.audioEL.nativeElement ,
+      showBgColor: false,
+      gradient: 'rainbow',
+      mode:0,
+      reflexAlpha: 0.45, 
+      reflexBright:0.45,
+      reflexRatio: 0.25,
+      reflexFit: true,
+      showPeaks: false,
+        showScaleX: false,
+      onCanvasDraw: energyMeters
+    }
+  );
+
+  let timeElapsed = 0;
+}
+</script>
+
+
+
+

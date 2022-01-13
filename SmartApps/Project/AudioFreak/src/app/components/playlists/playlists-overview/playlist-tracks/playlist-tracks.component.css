@@ -1,0 +1,36 @@
+.wrapper{
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.content{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.mat-toolbar-multiple-rows {
+    min-height: 36px;
+    height: 36px;
+}
+
+.mat-toolbar-row{
+    padding-left: 0;
+}
+
+.btnBack{
+    color: inherit;
+}
+
+h3{
+    font-weight: bold;
+}
+
+.tracklist{
+    display: flex;
+    flex: 1 1 auto;
+}
+app-tracklist{
+    width: 100%;
+}

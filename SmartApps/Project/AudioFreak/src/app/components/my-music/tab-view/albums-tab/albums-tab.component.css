@@ -1,0 +1,111 @@
+.wrapper{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
+
+.image-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0.5em;
+}
+  
+.image-list__item {
+    display: flex;
+    flex-flow: column;
+    height: 230px;
+    width: 170px;
+}
+
+.image-list__item p:nth-of-type(1) {
+    font-weight: bold;
+}
+
+.cover{
+    display: block;
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+}
+.text-label-album{
+    text-align: left;
+    white-space: normal;
+    overflow: hidden;
+    margin: 0;
+}
+
+.text-label-artist{
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+}
+
+.twoliner{
+    max-height: 40px;
+}
+
+virtual-scroller {
+    width: 100%;
+    height: 100%;
+}
+.itemWrap{
+    margin: 0.5em;
+    cursor: pointer;
+}
+
+img{
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.ng-lazyloaded{
+    opacity: 1;
+}
+
+.albumIcon{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+mat-icon{
+    height: 45px !important;
+    width: 45px !important;
+}
+
+mat-selection-list{
+    padding-top: 0;
+}
+
+.bold{
+    font-weight: bold !important;
+}
+
+.ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.noData{
+    color: rgba(128, 128, 128, 0.486);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    font-style: italic;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;     
+}
+
+.middle{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}

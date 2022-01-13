@@ -1,0 +1,109 @@
+<div class="wrapper" [ngClass]="{'showFV': isActive}">
+    <div class="bgDiv" *ngIf="songData.cover != '../../../../assets/images/no_cover_dark.png'" [style.background-image]="'url('+ songData.cover+')'"></div>
+    <div class="bgDiv" *ngIf="songData.cover == '../../../../assets/images/no_cover_dark.png'"></div>
+    <div class="top">
+        <button mat-icon-button class="btnMinimize" (click)="minimizeView()">
+            <mat-icon class="actionIconBtn">arrow_back</mat-icon>
+        </button>
+        <div>
+          <button mat-icon-button [matMenuTriggerFor]="menuVolume" class="btnVol">
+            <mat-icon class="actionIconBtn">audiotrack</mat-icon>
+          </button>
+          <button (click)="openEQBottomSheet()" mat-icon-button class="btnEQ" >
+            <mat-icon class="actionIconBtn">equalizer</mat-icon>
+          </button>
+          <button mat-icon-button class="btnVisualizer" (click)="openVIBottomsheet()">
+            <mat-icon class="actionIconBtn">graphic_eq</mat-icon>
+          </button>
+        </div>
+    </div>
+    
+    <div #mainWrapper class="middle">
+      <div class="visContainer" [ngClass]="{'showVis': showVisual == true}">
+        <app-visualizer></app-visualizer>
+      </div>
+      <div style="height: 100%;" [ngClass]="{'hideTabs': showVisual == true}">
+        <mat-tab-group #mattabgroup [disablePagination]=true class="maxHeight mat-tab-fill-height" animationDuration="600ms" (selectedTabChange)=tabChange($event)>
+          <mat-tab >
+            <ng-template mat-tab-label>
+              <span class="tabHeaders spanLabel">Song</span>
+            </ng-template>
+            <div class="middleWrap">
+              <div class="imgWrap">
+                <img [src]="domSrv.bypassSecurityTrustUrl(songData.cover)">
+              </div>
+              <div class="songInfo">
+                <p>{{songData.title}}</p>
+                <p>{{songData.artist}}</p>
+              </div>
+            </div>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <span class="tabHeaders spanLabel">Lyric</span>
+            </ng-template>
+            <div class="lyricsWrap">
+              <app-lyrics [toggleReadability]="toggleReadability" [songData]=songData></app-lyrics>
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon class="dottedBtn">more_vert</mat-icon>
+              </button>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+    
+    <div class="controlsWrap">
+        <div class="mediaControls">
+            <div class="controlButtons">
+              <button [ngClass]="{'toggleStyle':shuffleOn == true}" class="IconBorder" (click)="toggleShuffle()" mat-icon-button>
+                <mat-icon class="actionIconBtn">shuffle</mat-icon>
+              </button>
+              <button mat-icon-button class="IconBorder" (click)="togglePrevious()">
+                <mat-icon class="actionIconBtn">skip_previous</mat-icon>
+              </button>
+              <button mat-icon-button class="playIcon IconBorder" (click)="togglePlay()">
+                <mat-icon class="actionIconBtn" *ngIf="isPlaying == false">play_circle_outline</mat-icon>
+                <mat-icon class="actionIconBtn" *ngIf="isPlaying == true">pause_circle_filled</mat-icon>
+              </button>
+              <button mat-icon-button class="IconBorder" (click)="toggleNext()">
+                <mat-icon class="actionIconBtn">skip_next</mat-icon>
+              </button>
+              <button class="IconBorder" [ngClass]="{'toggleStyle':repeatOn == true}" (click)="toggleRepeat()"  mat-icon-button>
+                <mat-icon class="actionIconBtn">replay</mat-icon>
+              </button>
+            </div>
+            <div class="divWrapper playbackSlider">
+              <span id="currentTime" class="time spanLabel">{{currentTime}}</span>
+              <mat-slider #seekslider (valueChange)="changeCurTime($event)" [min]="minTime" [max]="maxTime" [(value)]="timeSliderVal" step="1" style="width:100%"></mat-slider>
+              <span id="totalDuration" class="time spanLabel">{{duration}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<mat-menu #menu="matMenu" xPosition="before">
+<!--   <button mat-menu-item (click)="editLyric()">
+    <mat-icon>edit</mat-icon>
+    <span>Edit lyric</span>
+  </button> -->
+  <button [disabled]="lyricPresent == false" mat-menu-item (click)="deleteLyric()">
+    <mat-icon>delete</mat-icon>
+    <span>Delete lyric</span>
+  </button>
+  <button [disabled]="lyricPresent == false" mat-menu-item (click)="improveReadability()">
+    <mat-icon>remove_red_eye</mat-icon>
+    <span>Toggle readability</span>
+  </button>
+</mat-menu>
+
+
+<mat-menu #menuVolume="matMenu" xPosition="before" >
+  <div class="controlOptions">
+    <button #muteBtn mat-icon-button (click)="$event.stopPropagation(); onMute()">
+      <mat-icon *ngIf="isMuted == true">volume_off</mat-icon>
+      <mat-icon *ngIf="isMuted == false">volume_up</mat-icon>
+    </button>
+    <mat-slider #volumeControl min="0" max="100" [value]=volume step="1" (change)="adjustVolume($event)" (click)="$event.stopPropagation();"></mat-slider>
+  </div>
+</mat-menu>

@@ -1,0 +1,21 @@
+<mat-toolbar class="vi-head" color="primary">
+    <p>Visualizer</p>
+    <mat-form-field>
+        <mat-label>Types</mat-label>
+        <mat-select value="{{currentVIType}}" #select (selectionChange)="onVisualizerTypeSelect($event)">
+            <mat-option  value="wave">
+                Wave
+            </mat-option>
+            <mat-option  value="circular">
+                Circular
+            </mat-option>
+            <mat-option  value="transform">
+                Transform
+            </mat-option>
+            <mat-option  value="spectrum">
+                Spectrum
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-slide-toggle [checked]="viEnabled" (input)="onVIToggle()"></mat-slide-toggle>
+</mat-toolbar>

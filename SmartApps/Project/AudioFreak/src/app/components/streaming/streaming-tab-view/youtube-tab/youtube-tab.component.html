@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <div class="header">
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Search query for Youtube</mat-label>
+      <input matInput type="text" (keydown.enter)="videoSearch()" [formControl]="search">
+      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <div id="buttons">
+      <button (click)="videoSearch()" class="searchButton" mat-raised-button color="primary">Search Videos</button>
+      <button (click)="nextSearch()" class="searchButton" mat-raised-button color="primary">Next Videos</button>  
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="container" >
+    <mat-card *ngFor="let video of vidArr" class="example-card">
+      <div (click)="onClick(video.vidId)">
+        <img width="100%" [src]="video.thumbnail">
+        <mat-card-content>
+          <mat-label matTooltip={{video.vidTitle}}>
+            <p id="VidTitle" style="font-weight: bold;">
+              {{video.vidTitle}}
+            </p>
+          </mat-label>
+          <small>
+            {{video.channel}}
+          </small>
+        </mat-card-content>  
+      </div>
+    </mat-card>
+  </div>
+</div>

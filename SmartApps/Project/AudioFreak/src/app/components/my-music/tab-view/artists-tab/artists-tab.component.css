@@ -1,0 +1,42 @@
+.wrapper{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+mat-list{
+    width: 100%;
+    margin-top: auto;
+    padding-top:0;    
+}
+
+mat-divider{
+    border-top-width: 1px;
+    border-top-color: rgb(0 0 0 / 27%);
+}
+
+.clasifier{
+    font-weight: bold;
+}
+
+mat-list-item{
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+}
+mat-list-item:hover{
+    cursor: pointer;
+    border-color: #00a2ed ;
+}
+.letterBtn{
+    min-width:fit-content;
+    padding: 0px 10px;
+}
+
+.actionbar{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}

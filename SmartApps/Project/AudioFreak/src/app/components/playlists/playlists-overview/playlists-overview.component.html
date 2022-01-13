@@ -1,0 +1,35 @@
+<div class="wrapper">
+    <cdk-virtual-scroll-viewport orientation='vertical'  [itemSize]="48"  style="height: 100%; width: 100%;">
+        <mat-selection-list #albums [multiple]="false">
+            <mat-list-option [disableRipple]="true" *ngFor="let item of Playlists" [value]="item" (click)="routePlaylistView(item.key)">
+                <div class="optionWrap">
+                    <span class="bold ellipsis">{{item.key}}</span>
+       
+                    <button *ngIf="(item.value.length >= 0 && item.key.toLowerCase() != 'favorites' && item.key.toLowerCase() != 'recently played') || (item.value.length > 0 && (item.key.toLowerCase() == 'favorites' || item.key.toLowerCase() == 'recently played'))" (click)="$event.stopPropagation()" mat-icon-button [matMenuTriggerFor]="menu">
+                        <mat-icon class="dottedBtn">more_vert</mat-icon>
+                    </button>
+                </div>
+                <mat-menu #menu="matMenu" xPosition="before">
+                    <button mat-menu-item *ngIf="item.value.length > 0" (click)="playPlaylist(item)">
+                        <mat-icon>playlist_play</mat-icon>
+                        <span>Play</span>
+                    </button>
+                    <ng-container *ngIf="item.key.toLowerCase() != 'favorites' && item.key.toLowerCase() != 'recently played'">
+                     <!--    <button mat-menu-item >
+                            <mat-icon>edit</mat-icon>
+                            <span>Rename playlist</span>
+                        </button> -->
+                        <button mat-menu-item (click)="deletePlaylist(item.key)">
+                            <mat-icon>playlist_remove</mat-icon>
+                            <span>Delete playlist</span>
+                        </button>
+                    </ng-container>
+                </mat-menu> 
+            </mat-list-option>
+          </mat-selection-list>
+    </cdk-virtual-scroll-viewport>
+    <button mat-mini-fab color="primary" class="btnFab" (click)="openAddDialog()">
+        <mat-icon>playlist_add</mat-icon>
+    </button>
+</div> 
+

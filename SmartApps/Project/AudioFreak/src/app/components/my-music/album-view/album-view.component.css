@@ -1,0 +1,88 @@
+.wrapper{
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+.content{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.mat-toolbar-multiple-rows {
+    min-height: 36px;
+    height: 36px;
+}
+.mat-toolbar-row{
+    padding-left: 0;
+}
+.btnBack{
+    color: #00000061;
+}
+
+h3{
+    font-weight: bold;
+}
+
+.tracklist{
+    display: flex;
+    flex: 1 1 auto;
+}
+app-tracklist{
+    width: 100%;
+}
+
+img{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.albumInfo{
+    height: fit-content;
+    display: flex;
+}
+
+.infoText{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.infoText_span{
+    margin: 0 6px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+.infoText_span p:first-of-type{
+    margin-bottom: 20px;
+}
+
+img{
+    width: 200px;
+}
+
+.ellipsis{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: initial;
+}
+
+@supports (-webkit-line-clamp: 2) {
+    .ellipsis{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+}

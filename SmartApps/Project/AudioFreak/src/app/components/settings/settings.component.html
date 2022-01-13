@@ -1,0 +1,116 @@
+  <mat-accordion>
+    <mat-selection-list [multiple]="true">
+
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Change Theme
+        </mat-panel-title>
+        <mat-panel-description>
+          {{selectedTheme.label}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-list-option (click)="themeChangeHandler(Theme)" *ngFor="let Theme of options" [selected]="selectedTheme.value == Theme.value ? true : false" [disabled]="selectedTheme.value == Theme.value">
+        <!--[ngStyle]="{ 'color': Theme.buttonColor}"-->
+
+        <div style="display: flex; justify-content: space-between;" mat-line>
+          <p>{{Theme.label}}</p>
+          <mat-icon
+          role="img" 
+          svgicon="theme-example"
+          aria-hidden="true">
+          <svg
+            xmlns="http://www.w3.org/2000/svg" 
+            xmlns:xlink="http://www.w3.org/1999/xlink" 
+            width="100%" 
+            height="100%"
+            viewBox="0 0 80 80" 
+            fit="" 
+            preserveAspectRatio="xMidYMid meet" 
+            focusable="false">
+            <defs>
+              <path
+                d="M77.87 0C79.05 0 80 .95 80 2.13v75.74c0 1.17-.95 2.13-2.13 2.13H2.13C.96 80 0 79.04 0 77.87V2.13C0 .95.96 0 2.13 0h75.74z"
+                id="a">
+              </path>
+              <path
+                d="M54 40c3.32 0 6 2.69 6 6 0 1.2 0-1.2 0 0 0 3.31-2.68 6-6 6H26c-3.31 0-6-2.69-6-6 0-1.2 0 1.2 0 0 0-3.31 2.69-6 6-6h28z"
+                id="b">
+              </path>
+              <path d="M0 0h80v17.24H0V0z" id="c"></path>
+            </defs>
+            <use xlink:href="#a" [attr.fill]="Theme.backgroundColor"></use>
+            <use xlink:href="#b" [attr.fill]="Theme.buttonColor"></use>
+            <use xlink:href="#c" [attr.fill]="Theme.headingColor"></use>
+          </svg>
+        </mat-icon>
+        </div>
+      </mat-list-option>
+    </mat-expansion-panel>
+
+    
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Tab Order
+        </mat-panel-title>
+        <mat-panel-description>
+          {{tabDesc}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div cdkDropList class="list-tabs" (cdkDropListDropped)="drop($event)">
+        <div class="container-tab" [ngStyle]="{ 'background': selectedTheme.backgroundColor}" *ngFor="let tab of tabs" cdkDrag>
+          <div class="icon-div">
+            <mat-icon>drag_indicator</mat-icon>
+            <p>{{tab.name}}</p>  
+          </div>
+          <mat-slide-toggle #slideToggle (click)="showToast(slideToggle)" [disabled]="disableToggle(slideToggle)" [attr.data-for]="tab.name" (change)="onEnableChange($event,tab)" [checked]=tab.enabled></mat-slide-toggle>
+        </div>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Album View
+        </mat-panel-title>
+        <mat-panel-description>
+          {{selectedView.name}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-list-option (click)="albumViewChangeHandler(view)" *ngFor="let view of viewOption" [selected]="selectedView.name == view.name ? true : false" [disabled]="selectedView.name == view.name">
+        <div class="icon-div" style="display: flex; justify-content: flex-start;" mat-line>
+          <mat-icon>{{view.icon}}</mat-icon>          
+          <p>{{view.name}}</p>
+        </div>
+      </mat-list-option>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Application Data
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <button mat-stroked-button color="warn" (click)="dialogResponse()">Clear Cache</button>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Root Music Directory
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Choose your directory</p>
+      <button mat-stroked-button  (click)="openDirPicker()">Folders</button>
+    </mat-expansion-panel>
+  </mat-selection-list>
+  </mat-accordion>
+
+
